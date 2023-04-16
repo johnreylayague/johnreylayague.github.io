@@ -5,8 +5,513 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <h1>Hello World !</h1>
+
+   <header>
+        <div class="wrapper">
+            <div class="header_container">
+          
+            </div>
+        </div>
+   </header>
+  
+    <div class="content">
+        <div class="wrapper">
+          <div class="content_container">
+
+            <h1>Git Quick Start Commands</h1>
+
+            <section>
+                <h2>Command Listing, Part 1</h2>
+                <p> pwd
+                    mkdir projects
+                    cd projects
+                    pwd
+                </p>
+            </section>
+
+            <section>
+                <h2>Command Listing, Part 2</h2>
+                <p>git version
+                    git config --global user.name "Abe Lincoln"
+                    git config --global user.email "mrabe@git.training"
+                    git config --global --list
+                    git clone github-https-url # paste in your GitHub HTTPS clone URL
+                    ls
+                    cd github-demo
+                    ls
+                    git status
+                    echo "Test Git Quick Start demo" >> start.txt
+                    ls
+                    cat start.txt
+                    git status
+                    git add start.txt
+                    git status
+                    git commit -m "Adding start text file"
+                    git status
+                    git push origin master
+                </p>
+            </section>
+
+            <h1>Basic Commands</h1>
+
+            <section>
+                <h2>Completely Fresh</h2>
+                <h3>Command Listing</h3>
+                <p>pwd
+                    cd projects
+                    pwd
+                    git init fresh-project # replace with name of your project
+                    ls
+                    cd fresh-project
+                    ls
+                    ls -al
+                    cd .git
+                    ls
+                    cd ..
+                    pwd
+                    git status
+                    mate hipster.txt
+                    git status
+                    git add hipster.txt
+                    git status
+                    git commit
+                    git status
+                    cd ..
+                    pwd
+                    ls
+                    rm -rf fresh-projects
+                </p>
+            </section>
+
+            <section>
+                <h2>Existing Source</h2>
+                <h3>Command Listing</h3>
+
+                <p>pwd
+                    cd projects
+                    pwd
+                    git init fresh-project # replace with name of your project
+                    ls
+                    cd fresh-project
+                    ls
+                    ls -al
+                    cd .git
+                    ls
+                    cd ..
+                    pwd
+                    git status
+                    mate hipster.txt
+                    git status
+                    git add hipster.txt
+                    git status
+                    git commit
+                    git status
+                    cd ..
+                    pwd
+                    ls
+                    rm -rf fresh-projects
+                </p>
+            </section>
+
+            <section>
+                <h2>Remote (GitHub)</h2>
+                <h3>Command Listing</h3>
+
+                <p>pwd
+                    cd projects
+                    git clone github-https-url # my value: https://github.com/awesomejt/starter-web.git
+                    ls
+                    cd starter-web
+                    ls
+                    ls -al
+                    cd .git
+                    ls
+                    cd ..
+                    clear
+                    git status
+                </p>
+            </section>
+
+            <section>
+                <h2>Basic Git Workflow / First Commit</h2>
+                <h3>Command Listing</h3>
+
+                <p>pwd
+                    cd projects
+                    ls
+                    cd starter-web
+                    ls
+                    git status
+                    mate hipster.txt
+                    ls
+                    git status
+                    git add hipster.txt
+                    git status
+                    git commit
+                    git status
+                    git pull origin master
+                    clear
+                    git push origin master
+                </p>
+            </section>
+
+            <section>
+                <h2>Adjusting the Git Config</h2>
+                <h4>Resetting to author's name from demo in the Git Quick Start.</h4>
+                <h3>Command Listing</h3>
+
+                <p>mate ~/.gitconfig</p>
+            </section>
+
+            <section>
+                <h3>~/.gitconfig File</h3>
+
+                <p>[user]
+                    name = Jason Taylor
+                    email = jason.git.training
+                    [core]
+                    editor = mate -w
+                </p>
+            </section>
+
+            <section>
+                <h2>Tracked Files / Express Commit</h2>
+                <h3>Command Listing</h3>
+
+                <p>pwd
+                    cd projects
+                    ls
+                    cd starter-web
+                    ls
+                    git status
+                    mate hipster.txt
+                    git commit -am "Adding more ipsum text"
+                    git ls-files
+                    mate newfile.txt
+                    git status
+                    git ls-files
+                    git add newfile.txt
+                    git status
+                    git ls-files
+                </p>
+            </section>
+
+            <section>
+                <h2>Editing Files</h2>
+                <h3>Command Listing</h3>
+
+                <p>pwd
+                    cd projects/starter-web
+                    clear
+                    ls
+                    mate hipster.txt
+                    git status
+                    git commit -m "Adding new file"
+                    git status
+                    git add hipster.txt
+                    git status
+                    mate hipster.txt
+                    git status
+                    git add hipster.txt
+                    git status
+                    git commit -m "More ipsum for hipsters"
+                    git status
+                </p>
+            </section>
+
+            <section>
+                <h2>Recursive Add</h2>
+                <h3>Command Listing</h3>
+
+                <p>pwd
+                    cd projects/starter-web
+                    git status
+                    mkdir -p level1/level2/level3/level4 # last item later deleted (currected from video)
+                    ls
+                    cd level1
+                    pwd
+                    mate level1-file.txt
+                    ls
+                    cd level2
+                    mate level2-file.txt
+                    ls
+                    cd level3
+                    mate level3-file.txt
+                    ls
+                    rm -rf level4
+                    clear
+                    cd ../../..
+                    ls
+                    git status
+                    git add .
+                    git status
+                    git commit
+                </p>
+            </section>
+            
+            <section>
+                <h2>Backing Out Changes</h2>
+                <h3>Command Listing</h3>
+
+                <p>pwd
+                    cd projects/starter-web
+                    ls
+                    git status
+                    cd level1
+                    ls
+                    mate level1-file.txt
+                    git status
+                    git add level1-file.txt
+                    git status
+                    mate level1-file.txt
+                    clear
+                    git status
+                    git reset HEAD level1-file.txt
+                    mate level1-file.txt
+                    clear
+                    git status
+                    git checkout -- level1-file.txt
+                    git status
+                    mate level1-file.txt
+                </p>
+            </section>
+
+            <section>
+                <h2>Rename</h2>
+                <h3>Command Listing</h3>
+
+                <p>pwd
+                    cd projects/starter-web
+                    ls
+                    cd level1/level2/level3
+                    pwd
+                    clear
+                    ls
+                    git status
+                    git mv level3--file.txt level3.txt
+                    ls
+                    git status
+                    git commit -m "renaming level3 file"
+                    cd ..
+                    clear
+                    pwd
+                    ls
+                    mv level2-file.txt level2.txt
+                    ls
+                    git status
+                    git add -A
+                    git status
+                    git commit
+                    clear
+                    ls
+                    git mv level2.txt 2.txt
+                    ls
+                    git status
+                    git mv 2.txt level2.txt
+                    ls
+                    git status
+                    clear
+                    ls
+                    git mv level2.txt level3
+                    ls
+                    cd level3
+                    ls
+                    git status
+                    cd ..
+                    git status
+                    git commit
+                    ls
+                    cd level3
+                    ls
+                    mv level2.txt ..
+                    ls
+                    cd ..
+                    pwd
+                    ls
+                    git status
+                    git add -A
+                    git status
+                    git commit
+                    clear
+                    cd ..
+                    pwd
+                    # file renamed in Finder
+                    git status
+                    git add level1.txt
+                    git add -u
+                    git status
+                    git commit
+                </p>
+            </section>
+
+            <section>
+                <h2>Deleting Files</h2>
+                <h3>Command Listing</h3>
+
+                <p>pwd
+                    cd projects/starter-web
+                    ls
+                    git status
+                    clear
+                    mate doomed.txt
+                    ls
+                    git status
+                    git rm doomed.txt
+                    rm doomed.txt
+                    ls
+                    git status
+                    clear
+                    git ls-files
+                    ls
+                    git rm newfile.txt
+                    git status
+                    git commit -m "Deleting new file"
+                    git status
+                    clear
+                    git status
+                    git ls-files
+                    git rm hipster.txt
+                    ls
+                    git status
+                    git reset HEAD hipster.txt
+                    git status
+                    git checkout -- hipster.txt
+                    ls
+                    git status
+                    clear
+                    ls
+                    rm hipster.txt
+                    ls
+                    git status
+                    git add -A
+                    git status
+                    git commit
+                    git status
+                    clear
+                    ls
+                    rm -rf level1
+                    ls
+                    git status
+                    git add -A
+                    git status
+                    git commit -m "deleting level1 and all children"
+                    git status
+                </p>
+            </section>
+
+            <section>
+                <h2>History</h2>
+                <h3>Command Listing</h3>
+            
+                <p>pwd
+                    git help log
+                    cd projects/starter-web
+                    git status
+                    clear
+                    git log
+                    git log --abbrev-commit
+                    git log --oneline --graph --decorate
+                    git log ae6f872...761b911
+                    git log --since="3 days ago"
+                    clear
+                    ls
+                    git log -- hipster.txt
+                    clear
+                    git log --follow -- level1/level2/level2.txt
+                    clear
+                    git show b1967804190e199d4c753e2c5e59d09ce65842d6
+                    clear
+                </p>
+            </section>
+
+            <section>
+                <h2>Git Alias</h2>
+                <h3>Command Listing</h3>
+            
+                <p>pwd
+                    cd projects/starter-web
+                    ls
+                    git status
+                    clear
+                    git log --all --graph --decorate --oneline
+                    git hist
+                    git config --global alias.hist "log --all --graph --decorate --oneline"
+                    git hist
+                    clear
+                    mate ~/.gitconfig
+                    git hist
+                    mate ~/.gitconfig
+                    git hist
+                    clear
+                </p>
+            </section>
+
+            <section>
+                <h2>Git Configuration File (~/.gitconfig) snip</h2>
+                <h3>Command Listing</h3>
+            
+                <p>[alias]
+                    hist = log --all --graph --decorate --oneline
+                </p>
+            </section>
+
+            <section>
+                <h2>Git Alias</h2>
+                <h3>Command Listing</h3>
+            
+                <p>pwd
+                    cd projects/starter-web
+                    ls
+                    git status
+                    ls -al
+                    mate .gitignore
+                    ls -al
+                    git status
+                    git add .gitignore
+                    git status
+                    git commit
+                    git status
+                    ls
+                    mate access.log
+                    ls
+                    git status
+                    git .gitignore
+                    clear
+                    git status
+                    mkdir log
+                    mv access.log log
+                    ls
+                    cd log
+                    ll
+                    cp access.log access.2014-11-04
+                    ll
+                    cd ..
+                    git status
+                    mate .gitignore
+                    git status
+                    git commit -am "Excluding log file directory"
+                    git status
+                </p>
+            </section>
+
+            <section>
+                <h2>Git Basics Cleanup</h2>
+                <h3>Command Listing</h3>
+            
+                <p>pwd
+                    cd projects/starter-web
+                    ls
+                    git status
+                    clear
+                    git pull origin master
+                    git push origin master
+                </p>
+            </section>
+          </div>
+        </div>
+    </div>
 </body>
 </html>
