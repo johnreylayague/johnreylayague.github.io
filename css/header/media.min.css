@@ -1,0 +1,1 @@
+:root{--primary-color:#0f0f0f;--secondary-color:#545454;--sub-header-color:#333333;--border-color:#d0d0d0}@media only screen and (max-width:575.98px){.header_container ul li{display:block}.header_container ul li+li::before{content:"";top:0;left:0;border-bottom:1px solid var(--border-color);width:100%}.header_container ul li a{word-wrap:break-word}}
