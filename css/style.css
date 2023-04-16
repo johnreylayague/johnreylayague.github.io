@@ -1,3 +1,4 @@
+
 /* reset */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -69,10 +70,11 @@ header
     .header_container {}
     .header_container h1 {}
 
-/* main */
-.main 
+/* content */
+.content 
     .content_container {}
     .content_container h1 {
+        word-wrap: break-word;
         margin-top: 55px;
         font-size: 2.5em;
         font-weight: 800;
@@ -80,6 +82,7 @@ header
         color: var(--primary-color);
     }
     .content_container section h2 {
+        word-wrap: break-word;
         margin-top: 25px;
         font-size: 1.5rem;
         font-weight: 800;
@@ -89,6 +92,7 @@ header
         color: var(--primary-color);
     }
     .content_container section h3 { 
+        word-wrap: break-word;
         font-size: 1.1rem;
         font-weight: 600;
         font-family: inherit;
@@ -98,18 +102,18 @@ header
 
     }
     .content_container section h4 { 
+        word-wrap: break-word;
         font-size: 0.9rem;
         font-weight: 600;
         font-family: inherit;
         color: var(--sub-header-color);
         margin-top: 25px;
         margin-bottom: 20px;
-
     }
     .content_container section p {
         font-size: 1rem;
         font-weight: 400;
-        font-family: inherit;
+        font-family: 'Open Sans', sans-serif;
         white-space: pre-line;
         border: 1px solid  var(--border-color);
         padding: 15px;
