@@ -686,6 +686,396 @@
                 </p>
             </section>
 
+            <section>
+                <h2>Quick Note</h2>
+                <h3>Command Listing</h3>
+            
+                <p>#UNZIP a file and zip location to your selected directory
+                    #(~) home directory
+                    #~/Downloads/(name of zip file)
+                    (directory) unzip ~/Downloads/(name of zip file)
+
+                    #rename folder/file or move = {for move use ..}
+                    git mv (old folder name ) (new folder name)
+                    #outside the folder
+                    git mv (folder name/file) ..
+
+                    #list = list of directory
+                    ls
+
+                    #initialize git on your new repository
+                    git init
+
+                    #see all files and dot folders - (al = { a = all , l = listing directory } )
+                    ls -al
+
+                    #add all files
+                    git add.
+
+                    #commit
+                    git commit -m "My first commit, inline" 
+
+                    #remove folder
+                    rm -rf .git (<-- ex. folder)
+
+                    #clone repository
+                    git clone (copied https url)
+
+
+                    #pull update, always pull before doing a push (BEST PRACTICE)
+                    git pull origin master
+
+
+                    #  to direct commit ,am = {a="add stage ", m="commit message"}
+                    git commit -am "Adding more ipsum text"
+
+                    #show git tracked files
+                    git ls-files
+
+                    #show logged in git in repository
+                    mate ~/.gitconfig
+
+                    #NETSTED FOLDER
+                    mkdir -p level1/level2/level3/level5
+
+                    #Using mate , add folder/file recursively
+                    git commit
+
+                    #unstage file/folder
+                    git --restore (file/folder name) (old)
+                    git reset filename
+
+                    #un add file/folder
+                    git restore (file/folder name)
+
+                    #update any renamed/move/deleted files/folder
+                    git add -A
+
+                    #If DS_store is visible, dont track this directory
+                    git add (folder/file name)
+                    git add -u 
+
+                    #Delete a file, that is not yet tracked
+                    rm (file name)
+                    #delete tracked file
+                    git rm (file name)
+
+                    #restore deleted file
+                    git restore (filename)
+
+                    # -rf = {r=recursive, f=force deletion}
+                    rm -rf (folder name)
+
+                    #to check out, retrieve specific deleted file 
+                    git checkout -- (file name)
+
+                    -----------LOG LIST--------------
+                    #show all list for indexes, history of commits on all branches
+                    #--decorate = it will show (head (#pointer), origin/master, origin/head, master)
+                    # *head = is just a pointer
+                    # *origin/master = a branches, master branch on the remote repo
+                    # *origin/head = a branches 
+                    # *master = a branches, master branch on the local repo
+
+
+                    git log --oneline --decorate --all --graph
+
+
+                    #help log & press q to return
+                    git help log
+
+                    #commit log & press q to return
+                    git log
+
+                    #shorten commit hash codes ex. 456ibs415420kfibs4154 =  45bs12
+                    git log --abbrev-commit
+
+                    #change git log in view to one line gprah and decorate
+                    git log --oneline --graph --decorate
+
+                    # show range from this # to this #
+                    git log ae6f872..761b911
+
+                    # show days ago
+                    git log --since="3days ago"
+
+                    # show history to this file commits
+                    git log -- (file name)
+
+                    #commit history to that file going through renames
+                    git log --follow -- level1/level2/level2.txt
+
+                    #show commit id , author , date , commit message and different information
+                    git show (commit id ex.456ibs415420kfibs4154)
+
+                    #short cut for git log --oneline --graph --decorate and will just put an alias on hist
+                    git hist
+                    git config --global alias.hist "log --all --graph --decorate --oneline"
+                    git hist
+
+                    # to show the alias and more, you can also change the alias here
+                    mate ~/.gitconfig
+
+                    #ignore files on the ignore content
+                    mate .gitignore
+
+                    #copy file (file and new name of file)
+                    cp access.log access.2014-11-04
+
+                    #see list of alias
+                    git config --global --list
+
+                    -----------------DIFF TOOL 
+                    ------The git diff command displays the differences between files in two commits or between a commit and your current repository.
+
+                    #review two branches modified
+                    git difftool master branchname
+
+                    #view modified file on unstaged
+                    git difftool
+
+                    #view modified file on staged
+                    git difftool --staged HEAD
+
+                    #view specific file
+                    git difftool -- README.md
+
+                    #Show history starting from head to specified index
+                    git diff ebf75bg HEAD
+
+                    #show last commit of the branch and prior to the last commit
+                    git difftool HEAD HEAD^
+
+                    #show or compare the two file modified
+                    git diff ebf75bg  xr225bg  
+
+                    #show branch commit , whats been pushed on master(working directory) and pushed in github
+                    git diff master origin/master
+
+                    #show or compare the two file modified in DIFFTOOL
+                    git difftool ebf75bg  xr225bg  
+                    ---------------DIFF TOOL END
+
+                    ---------------PULL
+                    #always git pull when pushing to REPO
+                    git pull
+
+                    ----------------BRANCHING
+                    #list branches and remote branches
+                    git branch -a
+
+                    #list branch that your in
+                    git branch
+
+
+                    #add new branches
+                    git branch mynewbranch
+
+                    #rename branch
+                    git branch -m mynewbranch newbrach
+
+                    #delete branch
+                    git branch -d newbranch
+
+                    #switch branch
+                    git checkout mynewbranch
+
+                    #create  branch before checking out
+                    git checkout -b title-change
+
+
+                    ------------MERGE
+                    #you need to go through your selected branch you want to merge first
+                    (master) git merge title-change
+
+                    #no fast forwarding on merge
+                    git merge branchname --no-ff 
+
+                    #undid the merge (from youtube https://www.youtube.com/watch?v=aLhYYHTmNvs)
+                    git reset ec5873 --hard
+
+
+                    --------------MERGE CONFLICT
+                    #to fix merege conflicts 
+                    git mergetool
+
+
+                    --------------REBASE
+                    #rebasing is changing the base of your branch from one commit to another making it appear as if you'd created your branch from a different commit.
+                    #Instead of creating a new commit that combines the two branches, it moves the commits of one of the branches on top of the other.
+                    git rebase master
+
+                    #abort rebase if conflict and pursure different approach
+                    git rebase --abort
+
+                    #to continue commited merge rebased
+                    git rebase --continue
+
+                    #pull rebase to see history  and just add your remote changes on your local
+                    git pull --rebase origin master
+
+
+                    #EXAMPLE. conflicts rebase
+                    git rebase master
+                    git mergetool (Comment : resolve conflict)
+                    git add simple.html
+                    git rebase --continue
+                    git log --oneline --decorate --graph --all
+
+
+                    -------------FETCH
+                    #get fetch is the safer option when comparing Git pull vs fetch because it pulls in all of your remote commits while leaving your local files alone.
+                    git fetch origin master
+
+                    #SPECIFIC BRANNCH FETCH 
+                    git fetch origin (branch name)
+
+                    -------------STASH
+                    #workon or go back again without commiting the file
+                    git stash
+
+                    #review the stash and you get the content again
+                    git stash apply
+
+                    #stash all, modifed or new file
+                    git stash -u
+
+                    #show all stash
+                    git stash pop
+
+                    #drop last stash
+                    git stash drop 
+
+                    #list of stash index
+                    git stash list
+
+                    #save stash with comment
+                    git stash save "example comment"
+
+                    #after stash list , select index what to show
+                    git stash show stash@{0}
+
+                    #apply the stash by index
+                    git stash apply stash@{0}
+
+                    #drop the stash by index
+                    git stash drop stash@{0}
+
+                    #empty list of stashes
+                    git stash clear
+
+                    #move all stash, make a branch and switch to this branch 
+                    git stash branch (branch name)
+
+
+                    -----------TAG
+                    #creating tag, marker to a particular commit 
+                    git tag (tag name)
+
+                    #tag list
+                    git tag --list
+
+                    #show specific tag name
+                    git show (tag name)
+
+                    #delete tag
+                    git tag --delete (tag name)
+
+                    #annotate
+                    git tag -a (tag name)
+
+                    #create tag with comment 
+                    git tag (tag name) -m "your comment here"
+
+                    #tag a specific commit
+                    git tag -a (tag name) (commit index ex. ey2764)
+
+                    #update a tag specific commit
+                    #f = force
+                    git tag -a (tag name) -f (new commit index ex. ey2764)
+
+                    #push specific tag in repo
+                    git push origin (tag name)
+
+                    #push all tag in repo
+                    git push origin master --tag
+
+                    #push nothing or delete tag on repo
+                    git push origin :(tag name)
+
+
+                    ---------COMMIT
+                    #change commit comment
+                    git commit --amend
+
+
+                    ------------RESET
+                    #reset commit
+                    git reset HEAD^1
+
+                    -----------REFLOG
+                    #show history of what you've done for the last 60 days
+                    git reflog
+
+                    -----BRANCH (havnt tried yet)
+
+                    #create branch and pull out from repo
+                    git branch test origin/test-branch
+
+                    -----HELP
+
+                    #example to get commend list 
+                    git stash help
+
+                    ----CHERRY-PICK
+                    #pick commmit from other branch
+                    git cherry-pick (commit id)
+
+                    --------------------------------------- --------------------------------------- --------------------------------------- --------------------------------------- --------------------------------------- --------------------------------------- --------------------------------------------------------
+
+                    -MAC APPLE
+                    ~open cmd
+                    mkdir projects
+                    cd projects
+
+                    #register to git
+                    git config --global user.name "Abe Lincoln"
+                    git config --global user.email "mrabe@git.training"
+                    git config --global --list
+
+                    #go to your githib and copy HTTPS
+                    #go inside the projects folder
+                    git clone (copied HTTPS)
+
+                    #check what branch ur in
+                    get status
+
+                    #create txt file and content
+                    echo "Test Git Quick Start demo" >> start.txt
+                    #check ls
+                    ls
+                    #check whats inside the txt file
+                    cat start.txt 
+
+                    #check to see if there is changes 
+                    git status
+
+                    #changes to be commited
+                    git add start.txt
+                    git status
+
+                    #commit to Staging Area
+                    git commit -m "Adding start text file"
+                    git status
+
+                    #if you cant login go to your github account, navigate through settings/developer settings > personal access tokens | tick repo #then generate token
+                    #use the token on your password in console interface
+                    #Commit to Github Repository
+                    git push origin master
+
+                </p>
+            </section>
+
           </div>
         </div>
     </div>
