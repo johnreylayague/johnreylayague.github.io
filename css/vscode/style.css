@@ -34,7 +34,14 @@ body {
         margin-top: 25px;
     }
     .content_container ul li {
-        list-style-type:circle;
+        position: relative;
+        padding-left: 25px;
+    }
+    .content_container ul li::before {
+        position: absolute;
+        content: "●"; 
+        left: 0;
+        top: 0;
     }
    
 
