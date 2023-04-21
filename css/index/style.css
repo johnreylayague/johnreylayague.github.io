@@ -179,7 +179,8 @@ body {
         color: var(--text-black-color);
     }   
     .header_container button{
-        margin-top: 40px;
+        display: none;
+        margin-top: 47px;
         float: right;
         border: 0;
         background-color: transparent;
@@ -187,7 +188,7 @@ body {
     .header_container button:active{
         background-color: #7E74F154;
         border-radius: 5px;
-      }   
+    }   
     .header_container .three-bars-icon{
         display: block;
         background: url(/icons/three-bars-icon.svg);
