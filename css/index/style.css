@@ -204,6 +204,7 @@ body {
 
     .main_container {
         height: calc(100vh - 130px);
+        min-height: 537px;
     }
     .main_container .main_content  {
         width: 540px;
