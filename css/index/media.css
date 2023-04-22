@@ -17,10 +17,7 @@
         padding-right: 55px;
     }
     .portfolio_container section {
-        width: 330px;
-    }
-    .portfolio_container section:not(:last-child) {
-        margin-right: 33px;
+        width: 324px;
     }
 }
 
@@ -32,21 +29,30 @@
         margin-right: 36px;
     }
     /* portfolio */
-#portfolio {
- 
+    #portfolio {}
+        .portfolio_container section {
+            width: 29.55%;
+        }
 }
+@media only screen and (max-width: 1150.98px) {
+     /* portfolio */
     .portfolio_container section {
-        width: 47%;
+        width: 30.65%;
+        margin-right: 36px;
     }
-    .portfolio_container section:nth-child(2n+1) {
-        float: left;
-        margin-right: 36px!important;
-    }
-    .portfolio_container section:not(:last-child) {
-        margin-right: 0px;
-    }
- }
-
+}
+@media only screen and (max-width: 1100.98px) {
+    /* portfolio */
+   .portfolio_container section {
+       width: 30.40%;
+   }
+}
+@media only screen and (max-width: 1000.98px) {
+    /* portfolio */
+   .portfolio_container section {
+       width: 30.35%;
+   }
+}
 /* Medium devices (tablets, less than 992px) */
 @media only screen and (max-width: 991.98px) { 
 /* header */
@@ -84,7 +90,10 @@
         padding-right: 30px;
     }
     .portfolio_container section {
-        width: 47%;
+        width: 47.30%;
+    }
+    .portfolio_container section:nth-of-type(2n+2){
+        margin-right: 0;
     }
     .portfolio_container h2 {
         margin-bottom: 25px;
@@ -119,6 +128,10 @@
     .portfolio_container{
         padding-left: 15px;
         padding-right: 15px;
+    }
+    .portfolio_container section {
+        margin-right: 15px;
+        width: 48.70%;
     }
 }
 

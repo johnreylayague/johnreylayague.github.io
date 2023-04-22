@@ -53,6 +53,7 @@ table {
     display: table;
     clear: both;
 }
+
 :root {
 
     /* light theme */
@@ -345,7 +346,6 @@ body {
     .portfolio_container {
         padding-top: 104px;
         padding-bottom: 176px;
-        text-align: center;
     }
     .portfolio_container p  {
         font-size: 12px;
@@ -380,13 +380,16 @@ body {
         display: inline-block;
         vertical-align: top;
         border-radius: 8px;
-        width: 355px;
+        width: 360px;
         position: relative;
         border: 1px solid var(--border-1-color);
         margin-top: 45px;
     }
-    .portfolio_container section:not(:last-child) {
+    .portfolio_container section {
         margin-right: 56px;
+    }
+    .portfolio_container section:nth-of-type(3n+3) { 
+        margin-right: 0;
     }
     .portfolio_container section figure {
         position: relative;
