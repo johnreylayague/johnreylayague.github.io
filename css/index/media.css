@@ -83,12 +83,16 @@
         padding-left: 30px;
         padding-right: 30px;
     }
-     .portfolio_container section {
-        width: 100%;
+    .portfolio_container section {
+        width: 47%;
     }
-    .portfolio_container section:nth-child(2n+1) {
-        float: none;
-        margin-right: 0!important;
+    .portfolio_container h2 {
+        margin-bottom: 25px;
+        font-size: 31px;
+    }
+    .portfolio_container {
+        padding-top: 52px;
+        padding-bottom: 88px;
     }
 }
 
@@ -111,12 +115,19 @@
         width: 100%;
         text-align: center;
     }
+
 }
 
 
 /* Small devices (landscape phones, less than 768px) */
 @media only screen and (max-width: 767.98px) { 
-
+    .portfolio_container section {
+        width: 100%;
+    }
+    .portfolio_container section:nth-child(2n+1) {
+        float: none;
+        margin-right: 0!important;
+    }
  }
 
 /* Extra small devices (portrait phones, less than 576px) */
