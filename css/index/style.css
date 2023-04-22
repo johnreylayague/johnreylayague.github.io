@@ -380,11 +380,10 @@ body {
         display: inline-block;
         vertical-align: top;
         border-radius: 8px;
-        width: 360px;
+        width: 355px;
         position: relative;
-        outline: 2px solid var(--border-1-color);
+        border: 1px solid var(--border-1-color);
         margin-top: 45px;
-
     }
     .portfolio_container section:not(:last-child) {
         margin-right: 56px;
@@ -403,6 +402,7 @@ body {
         height: 100%;
         width: 100%;
         z-index: 1;
+        border-radius: 8px 8px 0px 0px;
     }
     .portfolio_container section figure img{
         display: block;
@@ -413,6 +413,7 @@ body {
         object-position:top;
         background-color:var(--bg-gray-color);
         position: relative;
+        border-radius: 8px 8px 0px 0px;
     }
     .portfolio_container section h3{
         padding: 25px 25px 0px;

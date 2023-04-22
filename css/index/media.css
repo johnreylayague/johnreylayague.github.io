@@ -20,7 +20,7 @@
         width: 330px;
     }
     .portfolio_container section:not(:last-child) {
-        margin-right: 36px;
+        margin-right: 33px;
     }
 }
 
