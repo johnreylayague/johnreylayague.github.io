@@ -115,7 +115,11 @@
         width: 100%;
         text-align: center;
     }
-
+    /* portfolio */
+    .portfolio_container{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
 }
 
 
