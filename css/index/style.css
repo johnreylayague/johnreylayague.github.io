@@ -106,13 +106,17 @@ body {
     position: relative;
 }
 
+html, body {
+    height: 100%;
+}
+
 /* header */
 #header {
     background-color: var(--bg-white-1-color);
     }
     .header_container {
         text-align: center;
-        height: 130px;
+        line-height: 130px;
     }
     .header_container .header_logo  {
         margin-top: 40px;
@@ -145,7 +149,6 @@ body {
         font-family: 'Inter', sans-serif;
         font-weight: 400;
         color: var(--text-black-color);
-        line-height: 130px;
     }
     .header_container .header_right {
         float: right;
@@ -166,7 +169,6 @@ body {
         background-repeat: no-repeat;
     }
     .header_container .header_right li a {
-        line-height: 130px;
     }
     .header_container .header_right li:last-child a {
         border: 1px solid var(--border-color);
