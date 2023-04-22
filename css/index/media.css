@@ -95,6 +95,9 @@
     .portfolio_container section:nth-of-type(2n+2){
         margin-right: 0;
     }
+    .portfolio_container section:nth-of-type(2n+1){
+        margin-right: 36px;
+    }
     .portfolio_container h2 {
         margin-bottom: 25px;
         font-size: 31px;
@@ -130,9 +133,11 @@
         padding-right: 15px;
     }
     .portfolio_container section {
-        margin-right: 15px;
         width: 48.70%;
     }
+    .portfolio_container section:nth-of-type(2n+1) {
+        margin-right: 15px;
+      }
 }
 
 
