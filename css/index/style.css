@@ -422,6 +422,7 @@ body {
         font-weight: 400;
     }
     .portfolio_container section ul {
+        text-align: left;
         display:inline-block;
         padding: 15px 25px 25px;
     }
