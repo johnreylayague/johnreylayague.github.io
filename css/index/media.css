@@ -90,10 +90,6 @@
         float: none;
         margin-right: 0!important;
     }
-    .portfolio_container section figure img {
-        object-fit: contain;
-        object-position: center;
-    }
     
 }
 
