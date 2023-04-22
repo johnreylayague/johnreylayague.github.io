@@ -106,10 +106,6 @@ body {
     position: relative;
 }
 
-html, body {
-    height: 100%;
-}
-
 /* header */
 #header {
     background-color: var(--bg-white-1-color);
