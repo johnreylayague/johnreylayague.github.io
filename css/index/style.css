@@ -112,17 +112,14 @@ body {
     }
     .header_container {
         text-align: center;
-        line-height: 130px;
+        height: 130px;
     }
     .header_container .header_logo  {
         margin-top: 40px;
         float: left;
     }
-    .header_container .header_logo  a {
-     
-    }
-    .header_container .header_logo a figure {
-    }
+    .header_container .header_logo  a {}
+    .header_container .header_logo a figure {}
     .header_container figure img{
         max-width: 100%;
         display: block;
@@ -145,6 +142,7 @@ body {
         font-family: 'Inter', sans-serif;
         font-weight: 400;
         color: var(--text-black-color);
+        line-height: 130px;
     }
     .header_container .header_right {
         float: right;
@@ -157,14 +155,15 @@ body {
         margin-right: 32px;
         content: "";
     }
+    .header_container .header_right li a {
+        line-height: 130px;
+    }
     .header_container .header_right li a span{
         display: block;
         height: 24px;
         width: 24px;
-        background: url(/icons/moon-icon.svg);
+        background: url(../../icons/moon-icon.svg);
         background-repeat: no-repeat;
-    }
-    .header_container .header_right li a {
     }
     .header_container .header_right li:last-child a {
         border: 1px solid var(--border-color);
@@ -189,7 +188,7 @@ body {
     }   
     .header_container .three-bars-icon{
         display: block;
-        background: url(/icons/three-bars-icon.svg);
+        background: url(../../icons/three-bars-icon.svg);
         content: "";
         height: 24px;
         width: 30px;
@@ -224,7 +223,7 @@ body {
     .main_container .main_content p:first-child::before {
         position: absolute;
         display: block;
-        background: url(/images/main-dash.svg);
+        background: url(../../images/main-dash.svg);
         content: "";
         height: 2px;
         width: 15px;
@@ -271,17 +270,15 @@ body {
         height: 24px;
     }
     .main_container .main_content .main_social_media li a .github-icon {
-        content: url(/icons/github-icon.svg);
+        content: url(../../icons/github-icon.svg);
     }
     .main_container .main_content .main_social_media li a .facebook-icon {
-        content: url(/icons/facebook-icon.svg);
+        content: url(../../icons/facebook-icon.svg);
     }
     .main_container .main_content .main_social_media li a .instagram-icon {
-        content: url(/icons/instagram-icon.svg);
+        content: url(../../icons/instagram-icon.svg);
     }
-    .main_container .main_content .main_social_media li a figure {
-
-    }
+    .main_container .main_content .main_social_media li a figure {}
      .main_container .main_content .main_social_media li a figure img {
         max-width: 100%;
         display: block;
@@ -310,7 +307,7 @@ body {
         overflow: hidden;
      }
      .main_img figure::after {
-        background: url(/images/main-line.png);
+        background: url(../../images/main-line.png);
         background-repeat: no-repeat;
         content: "";
         position: absolute;
@@ -324,6 +321,7 @@ body {
         height: 400px;
         border-radius: 16px;
         max-width: 100%;
+        display: block;
     }
 #portfolio {
     background-color: var(--bg-white-2-color);
