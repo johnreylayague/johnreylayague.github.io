@@ -180,7 +180,14 @@ body {
     .header_container .header_right li a {
         line-height: 130px;
     }
-    .header_container .header_right li a span{
+    .header_container .header_right li a .sun-icon{
+        display: block;
+        height: 34px;
+        width: 34px;
+        background: url(../../icons/header-sun-icon.svg);
+        background-repeat: no-repeat;
+    }
+    .header_container .header_right li a .moon-icon{
         display: block;
         height: 24px;
         width: 24px;
@@ -465,7 +472,7 @@ body {
         display: block;
     }
 /* career-path */
-#career-path {}
+#career-path { background-color: var(--bg-white-2-color);}
     .career_container {
         padding: 104px 0;
         position: relative;

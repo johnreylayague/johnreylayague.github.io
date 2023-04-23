@@ -36,5 +36,28 @@ $(window).on('load', function(){
         $('.career_list > ul > li > a#proweaver').addClass('selected');
         localStorage.setItem('career_id','proweaver');
     }
-    
+    // theme changed onload page
+    if( localStorage.getItem('theme_style') == 'dark'){
+        $('body').removeClass('light').addClass('dark');
+        $('#theme-change').find('span').removeClass('moon-icon').addClass('sun-icon');
+    } else if( localStorage.getItem('theme_style') == 'light'){
+        $('body').removeClass('dark').addClass('light');
+        $('#theme-change').find('span').removeClass('sun-icon').addClass('moon-icon');
+    }
+
+});
+
+$('#theme-change').click(function(e) { 
+    e.preventDefault();
+
+    if($('body').hasClass("light")) { 
+        $('body').removeClass('light').addClass('dark');
+        $('#theme-change').find('span').removeClass('moon-icon').addClass('sun-icon');
+        localStorage.setItem('theme_style','dark');
+    } else {
+        $('body').removeClass('dark').addClass('light');
+        $('#theme-change').find('span').removeClass('sun-icon').addClass('moon-icon');
+        localStorage.setItem('theme_style','light');
+    }
+
 });
