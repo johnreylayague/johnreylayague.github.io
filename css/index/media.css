@@ -19,6 +19,11 @@
     .portfolio_container section {
         width: 324px;
     }
+    /* career-path */
+    .career_container {
+        padding-left: 55px;
+        padding-right: 55px;
+    }
 }
 
 
@@ -106,6 +111,17 @@
         padding-top: 52px;
         padding-bottom: 88px;
     }
+    /* career-path */
+    .career_container {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    .career_container .career_list {
+        width: 320px;
+    }
+    .career_container .career_description {
+        margin-left: 320px;
+    }
 }
 
 /* Small devices (landscape phones, less than 768px) */
@@ -138,6 +154,11 @@
     .portfolio_container section:nth-of-type(2n+1) {
         margin-right: 15px;
       }
+    /* career-path */
+    .career_container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
 }
 
 
@@ -149,6 +170,46 @@
     .portfolio_container section:nth-child(2n+1) {
         float: none;
         margin-right: 0!important;
+    }
+    /* career-path */
+    .career_container {
+    }
+    .career_container .career_list {
+        width: 100%;
+        float: none;
+    }
+    .career_container .career_list ul {
+        width: 100%;
+        display: inline-block;
+        vertical-align: middle;
+        text-align: left;
+    }
+    .career_container .career_list ul li {
+        display: inline-block;
+        vertical-align: middle;
+
+    }
+    .career_container .career_list ul li a .chevron-right-icon {
+        right: 0;
+    }
+    .career_container .career_description {
+        margin-left: 0;
+    }
+    .career_container .career_description section .experience_list li p {
+        display: inline-block;
+    }
+    .career_container .career_list ul li a {
+        padding-left: 0;
+    }
+    .career_container .career_list ul {
+        margin-top: 70px;
+    }
+    .career_container {
+        padding-top: 74px;
+        padding-bottom: 74px;
+    }
+    .career_container .career_list h2 {
+        font-size: 31px;
     }
  }
 
