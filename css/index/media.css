@@ -197,6 +197,10 @@
         vertical-align: middle;
 
     }
+    .career_container .career_list ul li a {
+        text-decoration: underline;
+        padding: 14px 16px;
+    }
     .career_container .career_list ul li a .chevron-right-icon {
         right: 0;
     }
@@ -205,9 +209,6 @@
     }
     .career_container .career_description section .experience_list li p {
         display: inline-block;
-    }
-    .career_container .career_list ul li a {
-        padding-left: 0;
     }
     .career_container .career_list ul li a.selected {
         text-decoration: underline;
