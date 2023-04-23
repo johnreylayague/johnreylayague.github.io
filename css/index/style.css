@@ -565,6 +565,7 @@ body {
         font-weight: 400;
         font-family: 'Inter', sans-serif;
         color: var(--text-gray-color);
+        line-height: 25px;
       }
       .career_container .career_description section h4 {
         margin-top: 20px;
