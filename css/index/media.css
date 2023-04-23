@@ -165,6 +165,9 @@
 /* Small devices (landscape phones, less than 768px) */
 @media only screen and (max-width: 767.98px) { 
     /* portfolio */
+    .portfolio_container {
+        text-align: center;
+    }
     .portfolio_container section {
         width: 100%;
     }
@@ -209,6 +212,7 @@
     }
     .career_container .career_description section .experience_list li p {
         display: inline-block;
+        font-size: 14px;
     }
     .career_container .career_list ul li a.selected {
         text-decoration: underline;

@@ -30,20 +30,24 @@ $(window).on('resize', function(e){
 
 $(window).on('load', function(){
 
-    if (localStorage.career_id != null) { 
-        $('#'+localStorage.getItem('career_id')+'').addClass('selected');
-    } else { 
-        $('.career_list > ul > li > a#proweaver').addClass('selected');
-        localStorage.setItem('career_id','proweaver');
-    }
-    // theme changed onload page
-    if( localStorage.getItem('theme_style') == 'dark'){
-        $('body').removeClass('light').addClass('dark');
-        $('#theme-change').find('span').removeClass('moon-icon').addClass('sun-icon');
-    } else if( localStorage.getItem('theme_style') == 'light'){
-        $('body').removeClass('dark').addClass('light');
-        $('#theme-change').find('span').removeClass('sun-icon').addClass('moon-icon');
-    }
+    let divHeight = $('section#'+localStorage.career_id+'');
+
+        if (localStorage.career_id != null) { 
+                $('.career_description').css({height:divHeight.height()});
+                $('#'+localStorage.getItem('career_id')+'').addClass('selected');
+        } else { 
+                $('.career_list > ul > li > a#proweaver').addClass('selected');
+                $('.career_list > ul > li > a#proweaver').css({height:divHeight.height()});
+                localStorage.setItem('career_id','proweaver');
+        }
+        // theme changed onload page
+        if( localStorage.getItem('theme_style') == 'dark'){
+            $('body').removeClass('light').addClass('dark');
+            $('#theme-change').find('span').removeClass('moon-icon').addClass('sun-icon');
+        } else if( localStorage.getItem('theme_style') == 'light'){
+            $('body').removeClass('dark').addClass('light');
+            $('#theme-change').find('span').removeClass('sun-icon').addClass('moon-icon');
+        }
 
 });
 
