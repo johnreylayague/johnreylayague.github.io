@@ -1,7 +1,4 @@
 
-    
-$( document ).ready(function() {
-
     $('.career_list > ul > li > a').click(function(e) {
         e.preventDefault();
         
@@ -31,20 +28,20 @@ $( document ).ready(function() {
     });
 
     $(window).on('load', function(){
-
         let divHeight = $('section#'+localStorage.career_id+'');
         let i = false;
 
             $('.career_list > ul > li > a').each(function(key, value){
                 if(localStorage.career_id != "" && localStorage.career_id == value.id ) {
-                i = true;
+                    i = true;
                 }
             });
-
+          
             if(i == true) {
                 $('#'+localStorage.getItem('career_id')+'').addClass('selected');
             } else {
                 $('.career_list > ul > li').first().find('a').click();
+                console.log('true');
             }
 
             if (localStorage.career_id != "") { 
@@ -83,5 +80,5 @@ $( document ).ready(function() {
         }
 
     });
-});
+
 
