@@ -548,7 +548,7 @@ body {
     }
     .career_container .career_description {
         margin-top: 32px;
-        margin-left: 420px;
+        padding: 5px;
         overflow-y: hidden;
         height: 660px;
     }
@@ -599,6 +599,10 @@ body {
     .career_container .career_description section .tech_stack_list li {
         padding-right: 11px;
         margin: 10px 0;
+    }
+    .career_container .career_description section .experience_list{
+        padding-top: 32px;
+        border-top: 1px solid var(--border-color);
     }
     .career_container .career_description section .experience_list:not(:last-of-type) {
       padding-bottom: 75px;
