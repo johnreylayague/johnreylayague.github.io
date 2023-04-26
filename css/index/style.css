@@ -472,7 +472,7 @@ body {
         display: block;
     }
 /* career-path */
-#career-path { background-color: var(--bg-white-2-color);}
+#career-path { background-color: var(--bg-white-1-color);}
     .career_container {
         padding: 104px 0;
         position: relative;
@@ -511,7 +511,7 @@ body {
     }
     .career_container .career_list ul {
         margin-top: 90px;
-        width: 280px;
+        width: 320px;
     }
     .career_container .career_list ul li a {
         color: var(--text-black-color);
@@ -547,8 +547,8 @@ body {
     .career_container .career_description {
         margin-top: 32px;
         margin-left: 420px;
-        overflow-y: hidden;
-        height: 320px;
+        overflow-y: auto;
+        height: 660px;
     }
     .career_container .career_description section:not(:first-child) { 
         margin-top: 55px;
