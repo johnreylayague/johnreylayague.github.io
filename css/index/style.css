@@ -48,7 +48,7 @@ table {
 }
 
 /* preset */
-.clearfix {
+.clearfix::after {
     content: "";
     display: table;
     clear: both;
@@ -399,6 +399,8 @@ body {
         position: relative;
         border: 1px solid var(--border-1-color);
         margin-top: 45px;
+        margin-right: 56px;
+
     }
     .portfolio_container section {
         margin-right: 56px;
@@ -598,6 +600,9 @@ body {
         padding-right: 11px;
         margin: 10px 0;
     }
+    .career_container .career_description section .experience_list:not(:last-of-type) {
+      padding-bottom: 75px;
+    }
     .career_container .career_description section .experience_list li p{
         color: var(--text-gray-color);
         font-weight: 400;
@@ -611,7 +616,7 @@ body {
     .career_container .career_description section .experience_list li:not(:last-child) p{
         margin-bottom: 20px;
     }
-    .career_container .career_description section .experience_list li p::after {
+    .career_container .career_description section .experience_list li p::before {
         position: absolute;
         display: block;
         background: url(../../images/main-dash.svg);
