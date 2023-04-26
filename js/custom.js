@@ -24,8 +24,8 @@ $('.career_list > ul > li > a').click(function(e) {
 $(window).on('resize', function(e){
 
     let id = $('.career_list > ul > li > a.selected').attr('id');
-
         $("#"+id+"").click();
+
 });
 
 $(window).on('load', function(){
@@ -35,10 +35,12 @@ $(window).on('load', function(){
         if (localStorage.career_id != null) { 
                 $('.career_description').css({height:divHeight.height()});
                 $('#'+localStorage.getItem('career_id')+'').addClass('selected');
+                $("#"+localStorage.career_id+"").click();
         } else { 
-                $('.career_list > ul > li > a#proweaver').addClass('selected');
-                $('.career_list > ul > li > a#proweaver').css({height:divHeight.height()});
-                localStorage.setItem('career_id','proweaver');
+                $('.career_list > ul > li').first().find('a').addClass('selected');
+                $('.career_list > ul > li').first().find('a').css({height:divHeight.height()});
+                localStorage.setItem('career_id', $('.career_list > ul > li').first().find('a').attr('id'));
+                $("#proweaver").click();
         }
         // theme changed onload page
         if( localStorage.getItem('theme_style') == 'dark'){

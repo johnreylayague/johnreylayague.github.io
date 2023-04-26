@@ -547,7 +547,7 @@ body {
     .career_container .career_description {
         margin-top: 32px;
         margin-left: 420px;
-        overflow-y: auto;
+        overflow-y: hidden;
         height: 660px;
     }
     .career_container .career_description section:not(:first-child) { 
@@ -624,7 +624,7 @@ body {
     }
 /* footer */
 footer {
-    background-color: var(--bg-white-1-color);
+    background-color: var(--bg-white-2-color);
     }
     .footer_container {
         display: flex;
