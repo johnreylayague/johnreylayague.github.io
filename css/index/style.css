@@ -548,7 +548,7 @@ body {
     }
     .career_container .career_description {
         margin-top: 32px;
-        padding: 5px;
+        padding-left: 1px;
         overflow-y: hidden;
         height: 660px;
     }
