@@ -12,12 +12,14 @@
     <title>Hi, my name is Johnrey Layaque</title>
 
     <link rel="icon" href="images/web-logo.svg" type="image/svg">
-    <link rel="stylesheet" href="css/index/style.min.css">
-    <link rel="stylesheet" href="css/index/media.min.css">
+    <link rel="stylesheet" href="css/index/media.css">
+    <link rel="stylesheet" href="css/plugins/animate.css">
+    <link rel="stylesheet" href="css/index/style.css">
 
 </head>
 <body class="light"> 
-   <!-- header navigation -->
+    <h6 id="test"></h6>
+    <!-- header navigation -->
    <header id="header">
        <div class="wrapper">
            <div class="header_container">
@@ -63,9 +65,15 @@
    <main id="main">
         <div class="wrapper">
             <div class="main_container">
+
                 <div class="main_content">
                     <p>MY NAME IS</p>
-                    <h1>Johnrey <span>Layaque.</span></h1>
+
+                      <div id="typed-strings">
+                        <h1>Johnrey <span>Layaque.</span></h1>
+                      </div>
+                      <span id="typed"></span>
+
                     <p>Hi, I'm an aspiring front-end developer who is self-taught and passionate about learning new skills. I am constantly seeking opportunities to enhance my knowledge and develop my skills further.</p>
                     <ul class="main_social_media">
                         <li>
@@ -85,10 +93,12 @@
                         </li>
                     </ul>
                 </div>
-                <div class="main_img">
+                <div class="main_img  ">
+                 <div class="wow fadeInRight">
                     <figure>
                         <img src="images/main-image.jpg" alt="Image of a person wearing a facemask">
                     </figure>
+                 </div>
                 </div>
             </div>
         </div>
@@ -101,7 +111,7 @@
             <div class="portfolio_container">
                 <p> MY WORKS</p>
                 <h2>Featured Portfolios</h2>
-                <section>
+                <section class="wow slideInLeft">
                     <figure>
                         <img src="images/portfolio-4.png" alt="An image of a login form is displayed on a white background with black dots. The form contains input fields for email and password">
                     </figure>
@@ -116,7 +126,7 @@
                             <li><a href="https://www.djangoproject.com/" target="_blank">Python</a></li>
                             <li><a href="https://membership.428am.xyz/" target="_blank"><span class="clip-link-icon"></span></a></li>
                         </ul>
-                </section><section>
+                </section><section class="wow slideInLeft">
                     <figure>
                         <img src="images/portfolio-2.png" alt="An image of a group of individuals wearing masks congregate in a public space, their faces obscured by the protective gear">
                     </figure>
@@ -129,7 +139,7 @@
                             <li><a href="https://jquery.com/" target="_blank">JQuery</a></li>
                             <li><a href="https://survey.428am.xyz/" target="_blank"><span class="clip-link-icon"></span></a></li>
                         </ul>
-                </section><section>
+                </section><section class="wow slideInLeft">
                     <figure>
                         <img src="images/portfolio-1.png" alt="An image of a multiple individuals engaged in various activities">
                     </figure>
@@ -289,8 +299,20 @@
    </footer>
    <!-- end of footer navigation -->
 
+   <!-- JQuery Plugin -->
     <script src="plugins/jquery-3.0.0.min.js"></script>
+    <!-- Wow Plugin -->
+    <script src="plugins/wow.js"></script>
+    <!-- Typed Plugin -->
+    <script src="plugins/typed.umd.js"></script>
+    <!-- Custom JS -->
     <script src="js/custom.min.js"></script>
+    <script>
+        var typed = new Typed('#typed', {
+            stringsElement: '#typed-strings',
+            typeSpeed: 50,
+        });
+    </script>
 </body>
 </html>
 
