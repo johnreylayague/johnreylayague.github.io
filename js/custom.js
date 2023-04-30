@@ -1,16 +1,5 @@
-    // WOW Initialized
-    new WOW().init();   
 
-
-    // // Type JS
-    // var typed = new Typed('h1', {
-    //     typeSpeed: 50,
-    //   });
-
-
-    // Custom JS
-  
-  $('.career_list > ul > li > a').click(function(e) {
+    $('.career_list > ul > li > a').click(function(e) {
         e.preventDefault();
         
         let id = e.currentTarget.id;
