@@ -24,6 +24,11 @@
         padding-left: 55px;
         padding-right: 55px;
     }
+    /* testimonials-path */
+    .testimonials_container {
+        padding-left: 55px;
+        padding-right: 55px;
+    }
 }
 
 
@@ -125,6 +130,13 @@
     .career_container .career_description section .experience_list li p {
         font-size: 14px;
     }
+
+     /* testimonials-path */
+#testimonials {}
+    .testimonials_container {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
 }
 
 /* Small devices (landscape phones, less than 768px) */
@@ -156,9 +168,15 @@
     }
     .portfolio_container section:nth-of-type(2n+1) {
         margin-right: 15px;
-      }
+    }
     /* career-path */
     .career_container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    /* testimonials-path */
+#testimonials {}
+    .testimonials_container {
         padding-left: 15px;
         padding-right: 15px;
     }
@@ -252,7 +270,13 @@
     .career_container .career_list {
         text-align: center;
     }
- }
+     /* testimonials-path */
+#testimonials {}
+    .testimonials_container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
 
 /* Extra small devices (portrait phones, less than 576px) */
 @media only screen and (max-width: 575.98px) { }

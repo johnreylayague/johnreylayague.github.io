@@ -1,16 +1,41 @@
     // WOW Initialized
     new WOW().init();   
+    
+    var typed = new Typed('#typed', {
+        stringsElement: '#typed-strings',
+        typeSpeed: 50,
+    });
 
+    var owl = $('.owl-carousel');
+    
+    owl.owlCarousel({
+        margin:37,
+        dotsEach:true,
+        loop:false,
+        stageClass: 'custom-owl-stage-class',
+        responsive:{
+            0:{
+                items:1
+            },
+            600:{
+                items:2
+            },
+            1000:{
+                items:3
+            }
+        }
+    })
 
-    // // Type JS
-    // var typed = new Typed('h1', {
-    //     typeSpeed: 50,
-    //   });
+    owl.on('mousewheel', '.custom-owl-stage-class', function (e) {
+        if (e.deltaY>0) {
+            owl.trigger('next.owl');
+        } else {
+            owl.trigger('prev.owl');
+        }
+        e.preventDefault();
+    });
 
-
-    // Custom JS
-  
-  $('.career_list > ul > li > a').click(function(e) {
+    $('.career_list > ul > li > a').click(function(e) {
         e.preventDefault();
         
         let id = e.currentTarget.id;

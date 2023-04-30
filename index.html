@@ -13,9 +13,10 @@
 
     <link rel="icon" href="images/web-logo.svg" type="image/svg">
     <link rel="stylesheet" href="css/index/media.css">
-    <link rel="stylesheet" href="css/plugins/animate.css">
+    <link rel="stylesheet" href="css/plugins/wow/animate.css">
     <link rel="stylesheet" href="css/index/style.css">
-
+    <link rel="stylesheet" href="css/plugins/owlcarousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/plugins/owlcarousel/owl.theme.default.min.css">
 </head>
 <body class="light"> 
     <h6 id="test"></h6>
@@ -269,13 +270,121 @@
    </div>
    <!-- end of career-path -->
     <!-- testimonials -->
-    <div id="education-and-skills" >
+    <div id="testimonials" >
+        <div class="wrapper">
+            <div class="testimonials_container">
+                <p>MY COLLEAGUE’S</p>
+                <h2>Testimonials</h2>
 
+                    <div class="owl-carousel owl-theme">
+
+                        <section>
+                            <figure>
+                                <img src="images/testimonials-image-1.jpg" alt="">
+                            </figure>
+                            <div class="testimonials_description">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut.</p>
+                                <h2>Cong TV</h2>
+                                <h3>Designer</h3>
+                            </div>
+                        </section>
+                        <section>
+                            <figure>
+                                <img src="images/testimonials-image-2.jpg" alt="">
+                            </figure>
+                            <div class="testimonials_description">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut.</p>
+                                <h2>Cong TV</h2>
+                                <h3>Designer</h3>
+                            </div>
+                        </section>
+
+                        <section>
+                            <figure>
+                                <img src="images/testimonials-image-3.jpg" alt="">
+                            </figure>
+                            <div class="testimonials_description">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut.</p>
+                                <h2>Cong TV</h2>
+                                <h3>Designer</h3>
+                            </div>
+                        </section>
+
+
+                        <section>
+                            <figure>
+                                <img src="images/testimonials-image-4.jpg" alt="">
+                            </figure>
+                            <div class="testimonials_description">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut.</p>
+                                <h2>Cong TV</h2>
+                                <h3>Designer</h3>
+                            </div>
+                        </section> 
+
+                </div>
+            </div>
+        </div>
     </div>
     <!-- end of testimonials -->
     <!-- education and skills -->
     <div id="education-and-skills">
+        <div class="wrapper">
+            <div class="education_container clearfix">
+                <p>LEARNING PATH</p>
+                <h2>Education & Skills</h2>
+                <div class="education_left">
+                    <div class="education_school">
+                        <h3>Asian College of Technology</h3>
+                        <h4>Bachelor's degree in Information Technology</h4>
+                        <address>P. del Rosario Street, Cebu City</address>
+                        <h5>2015 - 2019</h5>
+                    </div>
+                    <div class="education_school">
+                        <h3>Pardo National School</h3>
+                        <h4>Pardo Street, Cebu City</h4>
+                        <address>P. del Rosario Street, Cebu City</address>
+                        <h5>2015 - 2019</h5>
+                    </div>
+                    <div class="education_school">
+                        <h3>Regino Mercado Elementary School</h3>
+                        <h4>Pahina Central Panganiban St., Cebu City</h4>
+                        <address>P. del Rosario Street, Cebu City</address>
+                        <h5>2006 - 2011</h5>
+                    </div>
+                </div>
+                <div class="education_right">
+                    <p>I have been continuously learning in the field of front-end and experimenting with new technologies and frameworks, and here you can see a summary of my skills.
+                    </p>
+                    <h6>PHP</h6>
+                    <div class="progress_bar" ></div>
 
+                    <h6>JAVASCRIPT</h6>
+                    <div class="progress_bar" ></div>
+
+                    <h6>PYTHON DJANGO</h6>
+                    <div class="progress_bar"></div>
+
+                    <h6>HTML5</h6>
+                    <div class="progress_bar"></div>
+                    <h6>CSS3</h6>
+                    <div class="progress_bar" ></div>
+
+                    <h6>JQUERY</h6>
+                    <div class="progress_bar" ></div>
+
+                    <h6>BOOSTRAP 4</h6>
+                    <div class="progress_bar" ></div>
+
+                    <h6>MYSQL</h6>
+                    <div class="progress_bar" ></div>
+
+                    <h6>MSSQL</h6>
+                    <div class="progress_bar" ></div>
+
+                </div>
+            </div>
+        </div>
     </div>
     <!-- end of education and skills -->
    <!-- contact area -->
@@ -302,17 +411,15 @@
    <!-- JQuery Plugin -->
     <script src="plugins/jquery-3.0.0.min.js"></script>
     <!-- Wow Plugin -->
-    <script src="plugins/wow.js"></script>
+    <script src="plugins/wow/wow.js"></script>
     <!-- Typed Plugin -->
-    <script src="plugins/typed.umd.js"></script>
+    <script src="plugins/typed/typed.umd.js"></script>
+    <!-- OwlCarousel Plugin -->
+    <script src="plugins/owlcarousel/owl.carousel.min.js"></script>
+    <!-- OwlCarousel MouseWheel Plugin -->
+    <script src="plugins/owlcarousel/jquery.mousewheel.min.js"></script>
     <!-- Custom JS -->
     <script src="js/custom.min.js"></script>
-    <script>
-        var typed = new Typed('#typed', {
-            stringsElement: '#typed-strings',
-            typeSpeed: 50,
-        });
-    </script>
 </body>
 </html>
 
