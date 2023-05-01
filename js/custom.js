@@ -12,7 +12,6 @@
         margin:37,
         dotsEach:true,
         loop:false,
-        stageClass: 'custom-owl-stage-class',
         responsive:{
             0:{
                 items:1
@@ -26,7 +25,7 @@
         }
     })
 
-    owl.on('mousewheel', '.custom-owl-stage-class', function (e) {
+    owl.on('mousewheel', '.owl-stage', function (e) {
         if (e.deltaY>0) {
             owl.trigger('next.owl');
         } else {
