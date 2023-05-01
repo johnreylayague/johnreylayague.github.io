@@ -29,6 +29,22 @@
         padding-left: 55px;
         padding-right: 55px;
     }
+    /* education and skills*/
+    .education_container {
+        padding-left: 55px;
+        padding-right: 55px;
+    }
+    /* contact */
+    .contact_container  {
+        padding-left: 55px;
+        padding-right: 55px;
+    }
+    #contact .contact_container .contact_left {
+        width: 452px;
+    }
+    #contact .contact_container .contact_right {
+        padding-left: calc(100% - 450px);
+    }
 }
 
 
@@ -43,6 +59,19 @@
         .portfolio_container section {
             width: 29.55%;
         }
+    /* education and skills*/
+    #education-and-skills .education_container .education_left {
+       padding-right: calc(100% - 840px)
+    }
+    /* contact  */ 
+    #contact .contact_container .contact_left {
+        
+    }
+    #contact .contact_container .contact_right {
+        padding-left: calc(100% - 410px);
+    }
+
+    
 }
 @media only screen and (max-width: 1150.98px) {
      /* portfolio */
@@ -132,10 +161,29 @@
     }
 
      /* testimonials-path */
-#testimonials {}
     .testimonials_container {
         padding-left: 30px;
         padding-right: 30px;
+    }
+    /* education and skills*/
+    .education_container {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    /* education and skills*/
+    #education-and-skills .education_container .education_left {
+        padding-right: calc(100% - 700px)
+    }
+    /* contact */
+    .contact_container  {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    #contact .contact_container .contact_left {
+        width: 350px;
+    }
+    #contact .contact_container .contact_right {
+        padding-left: calc(100% - 320px);
     }
 }
 
@@ -180,6 +228,7 @@
         padding-left: 15px;
         padding-right: 15px;
     }
+    /* education and skills */
 }
 
 
@@ -271,10 +320,49 @@
         text-align: center;
     }
      /* testimonials-path */
-#testimonials {}
     .testimonials_container {
         padding-left: 15px;
         padding-right: 15px;
+    }
+    /* education and skills*/
+    .education_container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    /* education and skills*/
+    #education-and-skills .education_container .education_left {
+        padding-right: 0;
+        width: 100%;
+        float: none;
+    }
+    #education-and-skills .education_container .education_left .education_school {
+        max-width: 300px;
+        width: 100%;
+        margin: 0 auto;
+    }
+    
+    #education-and-skills .education_container .education_right {
+        margin-top: 90px;
+    }
+     /* contact */
+    .contact_container  {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    #contact .contact_container .contact_left {
+        float: none;
+        width: 100%;
+    }
+    #contact .contact_container .contact_right {
+        margin-top: 90px;
+        padding-left: 0;
+        max-width: 400px;
+        margin-left:  auto;
+        margin-right:  auto;
+    }
+    /* footer */
+    #footer .footer_container {
+        height: 141px;
     }
 }
 

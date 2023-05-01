@@ -53,10 +53,14 @@ table {
     display: table;
     clear: both;
 }
+input, textarea {
+    box-sizing: border-box;
+}
 *::selection {
     color: var(--text-white-color);
     background-color: var(--text-purple-color);
 }
+
 :root {
 
     /* light theme */
@@ -492,7 +496,8 @@ body {
 /* career-path */
 #career-path { background-color: var(--bg-white-1-color);}
     .career_container {
-        padding: 104px 0;
+        padding-top: 104px;
+        padding-bottom: 104px;
         position: relative;
     }
     .career_container .career_list {
@@ -777,11 +782,13 @@ body {
     }    
     .education_container .education_left {
        float: left;
-       /* border-left: 1px solid var(--border-color); */
+       padding-right: calc(100% - 920px);
     }
     .education_container .education_left .education_school {
        padding-left: 30px;
        position: relative;
+    }
+    .education_container .education_left .education_school:not(:last-child) {
        padding-bottom: 50px;
     }
     .education_container .education_left .education_school:last-child::after {
@@ -833,7 +840,7 @@ body {
         margin-bottom: 15px;
     }
     .education_container .education_right{
-        padding-left: 550px;
+     
     }
     .education_container .education_right p {
         font-size: 16px;
@@ -947,7 +954,8 @@ body {
         background-color: var(--bg-white-2-color);
     }
     .contact_container {
-        padding: 105px 0px;
+        padding-top: 105px;
+        padding-bottom: 105px;
     }
     .contact_container p {
         font-size: 12px;
@@ -980,55 +988,40 @@ body {
     }
     .contact_container .contact_left {
         float: left;
-    }
-    .contact_container .contact_left form input[name="input-name"]{
-        display: block;
-        border-radius: 8px;
-        height: 48px;
         width: 552px;
-        border: 0;
-        padding: 0px 24px;
-        background-color: var(--bg-white-1-color);
+        /* max-width: 552px; */
+        /* width: 100%; */
     }
-    .contact_container .contact_left form input[name="input-name"]::placeholder {
-        font-weight: 400;
-        font-family: 'Inter', sans-serif;
-        font-size: 14px;
-        color: var(--text-gray-color);
-    }
-    .contact_container .contact_left form input[name="input-name"]:focus-visible {
-        outline: 2px solid var(--bg-purple-color);
-    }
-    .contact_container .contact_left form input[name="input-name"]:focus {
-        outline: 2px solid var(--bg-purple-color);
-    }
-    .contact_container .contact_left form input[name="input-email"]{
+    .contact_container .contact_left form input:not(:first-child){ 
         margin-top: 16px;
+    }
+    .contact_container .contact_left form input {
         display: block;
         border-radius: 8px;
         height: 48px;
-        width: 552px;
+        width: 100%;
         border: 0;
         padding: 0px 24px;
         background-color: var(--bg-white-1-color);
     }
-    .contact_container .contact_left form input[name="input-email"]::placeholder {
+    .contact_container .contact_left form input::placeholder {
         font-weight: 400;
         font-family: 'Inter', sans-serif;
         font-size: 14px;
         color: var(--text-gray-color);
     }
-    .contact_container .contact_left form input[name="input-email"]:focus-visible {
+    .contact_container .contact_left form input:focus-visible {
         outline: 2px solid var(--bg-purple-color);
     }
-    .contact_container .contact_left form input[name="input-email"]:focus {
+    .contact_container .contact_left form input:focus {
         outline: 2px solid var(--bg-purple-color);
     }
     .contact_container .contact_left form textarea[name="textarea-message"]{
         margin-top: 25px;
         display: block;
-        min-width: 552px;
-        max-width: 552px;
+        /* min-width: 552px; */
+        /* max-width: 552px; */
+        width: 100%;
         border-radius: 8px;
         border: 0;
         min-height: 190px;
@@ -1051,7 +1044,8 @@ body {
     }
     .contact_container .contact_left form button[name="btn-send"]{
         margin-top: 50px;
-        width: 600px;
+        /* width: 600px; */
+        width: 100%;
         height: 49px;
         border: 0;
         border-radius: 8px;
@@ -1067,17 +1061,19 @@ body {
         cursor: pointer;
     }
     .contact_container .contact_right {
-        padding-left: 708px;
+        padding-left: calc(100% - 550px);
     }
     .contact_container .contact_right .contact_address {
         display: block;
+        position: relative;
     }
     .contact_container .contact_right .contact_address .address-icon {
         display: inline-block;
         width: 56px;
         background-color: var(--bg-white-3-color);
         height: 56px;
-        position: relative;
+        position: absolute;
+        left: 0;
         border-radius: 16px;
     }
     .contact_container .contact_right .contact_address .address-icon::before {
@@ -1093,7 +1089,7 @@ body {
     .contact_container .contact_right .contact_address .address-info {
         display: inline-block;
         vertical-align: top;
-        padding-left: 26px;
+        padding-left: 80px;
     }
      .contact_container .contact_right .contact_address h3 {
         font-weight: 500;
@@ -1115,13 +1111,15 @@ body {
     .contact_container .contact_right .contact_phone {
         margin-top: 48px;
         display: block;
+        position: relative;
     }
     .contact_container .contact_right .contact_phone .phone-icon {
         display: inline-block;
         width: 56px;
         background-color: var(--bg-white-3-color);
         height: 56px;
-        position: relative;
+        position: absolute;
+        left: 0;
         border-radius: 16px;
     }
     .contact_container .contact_right .contact_phone .phone-icon::before {
@@ -1137,7 +1135,7 @@ body {
     .contact_container .contact_right .contact_phone .phone-info {
         display: inline-block;
         vertical-align: top;
-        padding-left: 26px;
+        padding-left: 80px;
     }
     .contact_container .contact_right .contact_phone .phone-info h3{
         font-weight: 500;
@@ -1163,13 +1161,15 @@ body {
     .contact_container .contact_right .contact_email {
         margin-top: 48px;
         display: block;
+        position: relative;
     }
     .contact_container .contact_right .contact_email .email-icon {
         display: inline-block;
         width: 56px;
         background-color: var(--bg-white-3-color);
         height: 56px;
-        position: relative;
+        position: absolute;
+        left: 0;
         border-radius: 16px;
     }
     .contact_container .contact_right .contact_email .email-icon::before {
@@ -1185,7 +1185,7 @@ body {
     .contact_container .contact_right .contact_email .email-info {
         display: inline-block;
         vertical-align: top;
-        padding-left: 26px;
+        padding-left: 80px;
     }
     .contact_container .contact_right .contact_email .email-info h3{
         font-weight: 500;
