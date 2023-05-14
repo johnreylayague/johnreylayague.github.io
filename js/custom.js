@@ -26,24 +26,26 @@ var typed = new Typed("#typed", {
 // });
 const owl_portfolio = $("#owl-carousel-portfolio");
 $("#owl-carousel-portfolio").owlCarousel({
-  margin: 37,
   loop: false,
   nav: false,
   responsive: {
     0: {
+      margin: 15,
       items: 1,
       dots: true,
     },
     575: {
+      margin: 15,
       items: 2,
       dots: false,
     },
     767: {
+      margin: 15,
       items: 3,
       dots: false,
     },
-
     991: {
+      margin: 37,
       items: 3,
       dots: false,
     },
