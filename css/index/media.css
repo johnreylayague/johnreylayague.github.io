@@ -20,7 +20,7 @@
     padding-right: 55px;
   }
   /* testimonials-path */
-  .testimonials_container {
+  .testimonial_container {
     padding-left: 55px;
     padding-right: 55px;
   }
@@ -52,6 +52,10 @@
   #education-and-skills .education_container .education_left {
     padding-right: calc(100% - 840px);
   }
+  /* testimonials */
+  /* #testimonials .testimonial_container section {
+    height: 300px;
+  } */
   /* contact  */
   #contact .contact_container .contact_left {
   }
@@ -119,7 +123,7 @@
   }
 
   /* testimonials-path */
-  .testimonials_container {
+  .testimonial_container {
     padding-left: 30px;
     padding-right: 30px;
   }
@@ -253,7 +257,7 @@
     text-align: center;
   }
 
-  .testimonials_container {
+  .testimonial_container {
     padding-left: 15px;
     padding-right: 15px;
   }

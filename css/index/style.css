@@ -757,7 +757,7 @@ body {
   display: inline-block;
   padding: 24px 0px 33px;
 }
-.career_container .career_description section .tech_stack_list li a {
+.career_container .career_description section .tech_stack_list li {
   color: var(--text-gray-color);
   text-decoration: none;
   font-weight: 400;
@@ -772,8 +772,7 @@ body {
   vertical-align: middle;
 }
 .career_container .career_description section .tech_stack_list li {
-  padding-right: 11px;
-  margin: 10px 0;
+  margin: 10px 11px 10px 0px;
 }
 .career_container .career_description section .experience_list {
   padding-top: 32px;
@@ -785,7 +784,7 @@ body {
   .experience_list:not(:last-of-type) {
   padding-bottom: 75px;
 }
-.career_container .career_description section .experience_list li p {
+.career_container .career_description section .experience_list li {
   color: var(--text-gray-color);
   font-weight: 400;
   font-size: 16px;
@@ -799,11 +798,10 @@ body {
   .career_description
   section
   .experience_list
-  li:not(:last-child)
-  p {
+  li:not(:last-child) {
   margin-bottom: 20px;
 }
-.career_container .career_description section .experience_list li p::before {
+.career_container .career_description section .experience_list li::before {
   position: absolute;
   display: block;
   background: url(../../images/main-dash.svg);
@@ -814,19 +812,19 @@ body {
   left: 0;
   transform: translateY(-50%);
 }
-/* testimonials */
-#testimonials {
+/* testimonial */
+#testimonial {
   background-color: var(--bg-white-2-color);
 }
-.testimonials_container {
+.testimonial_container {
   padding-top: 104px;
   padding-bottom: 155px;
   position: relative;
 }
-.testimonials_container .owl-carousel .owl-stage-outer .owl-stage {
+.testimonial_container .owl-carousel .owl-stage-outer .owl-stage {
   margin: 0 auto;
 }
-.testimonials_container > p {
+.testimonial_container > p {
   font-size: 12px;
   margin-left: 32px;
   font-weight: 400;
@@ -836,7 +834,7 @@ body {
   position: relative;
   display: inline-block;
 }
-.testimonials_container > p::before {
+.testimonial_container > p::before {
   position: absolute;
   display: block;
   background: url(../../images/main-dash.svg);
@@ -847,73 +845,64 @@ body {
   left: -32px;
   transform: translateY(-50%);
 }
-.testimonials_container > h2 {
+.testimonial_container > h2 {
   margin-top: 22px;
   font-size: 36px;
   font-family: "Plus Jakarta Sans", sans-serif;
   font-weight: 800;
   color: var(--text-black-color);
 }
-.testimonials_container section {
+.testimonial_container section {
   margin-top: 135px;
-  height: 290px;
+  min-height: 290px;
   border-radius: 8px;
   background-color: var(--bg-white-1-color);
   position: relative;
+  box-sizing: border-box;
+  padding: 90px 30px 30px 30px;
 }
-.testimonials_container section figure {
-  border-radius: 1000px;
+.testimonial_container section figure {
   position: absolute;
   top: 0;
   left: 50%;
   transform: translate(-50%, -50%);
-}
-.testimonials_container
-  .owl-carousel
-  .owl-stage-outer
-  .owl-stage
-  .owl-item
-  section
-  figure
-  img {
-  max-width: 100%;
-  display: block;
-  height: 96px;
   width: 96px;
-  -o-object-fit: cover;
+  height: 96px;
+}
+.testimonial_container section figure img {
   object-fit: cover;
+  object-position: center;
   border-radius: 1000px;
+  height: 100%;
 }
-.testimonials_container section .testimonials_description {
-  position: absolute;
-  bottom: 0;
-  padding: 0px 30px 30px 25px;
-}
-.testimonials_container section p {
+.testimonial_container section p {
   font-size: 16px;
   margin-left: 0;
   font-weight: 400;
   font-family: "Inter", sans-serif;
   line-height: 28px;
   color: var(--text-black-colorr);
+  min-height: 70px;
+  margin-bottom: 50px;
 }
-.testimonials_container section h2 {
-  margin-top: 50px;
+.testimonial_container section h2 {
   font-size: 14px;
   font-weight: 500;
   font-family: "Plus Jakarta Sans", sans-serif;
   color: var(--text-black-colorr);
+  word-break: break-word;
 }
-.testimonials_container section h3 {
-  margin-top: 12px;
+.testimonial_container section h3 {
+  margin-top: 16px;
   font-size: 12px;
   font-weight: 500;
   font-family: "Inter", sans-serif;
   color: var(--text-gray-color);
   padding: 4px 8px;
-  display: inline-block;
   border-radius: 4px;
   background-color: var(--bg-white-2-color);
+  word-break: break-word;
+  display: inline-block;
 }
 /* education-and-skills */
 #education-and-skills {
