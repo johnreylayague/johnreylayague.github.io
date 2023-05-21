@@ -25,30 +25,40 @@ var typed = new Typed("#typed", {
 //   },
 // });
 const owl_portfolio = $("#owl-carousel-portfolio");
-owl_portfolio.owlCarousel({
-  loop: false,
-  nav: false,
-  lazyLoad: true,
-  responsive: {
-    0: {
-      margin: 15,
-      items: 1,
-      dots: true,
-      mouseDrag: true,
+function initializeCarousel() {
+  owl_portfolio.trigger("destroy.owl.carousel"); // Destroy the carousel
+  owl_portfolio.owlCarousel({
+    loop: false,
+    nav: false,
+    lazyLoad: true,
+    responsive: {
+      0: {
+        margin: 15,
+        items: 1,
+        dots: true,
+        mouseDrag: true,
+      },
+      576: {
+        margin: 15,
+        items: 2,
+        dots: true,
+        mouseDrag: true,
+      },
+      768: {
+        margin: 15,
+        items: 3,
+        dots: false,
+        mouseDrag: false,
+      },
     },
-    576: {
-      margin: 15,
-      items: 2,
-      dots: true,
-      mouseDrag: true,
-    },
-    768: {
-      margin: 15,
-      items: 3,
-      dots: false,
-      mouseDrag: false,
-    },
-  },
+  });
+}
+
+initializeCarousel();
+
+// Window resize event
+$(window).on("resize", function () {
+  initializeCarousel();
 });
 
 $("#owl-carousel-testimonial").owlCarousel({
