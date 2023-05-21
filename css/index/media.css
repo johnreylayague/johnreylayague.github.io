@@ -34,12 +34,6 @@
     padding-left: 55px;
     padding-right: 55px;
   }
-  #contact .contact_container .contact_left {
-    width: 452px;
-  }
-  #contact .contact_container .contact_right {
-    padding-left: calc(100% - 450px);
-  }
 }
 /* Large devices (desktops, less than 1200px) */
 @media only screen and (max-width: 1199.98px) {
@@ -50,7 +44,7 @@
   /* portfolio */
   /* education and skills*/
   #education-and-skills .education_container .education_left {
-    width: 350px;
+    max-width: 350px;
   }
   #education-and-skills .education_container .education_right {
     width: 500px;
@@ -58,9 +52,23 @@
   /* testimonials */
   /* contact  */
   #contact .contact_container .contact_left {
+    width: 450px;
   }
+  #contact
+    .contact_container
+    .contact_left
+    form
+    textarea[name="textarea-message"] {
+    max-width: 450px;
+    min-width: 450px;
+  }
+  /* #contact .contact_container .contact_right .contact_address .address-info,
+  #contact .contact_container .contact_right .contact_phone .phone-info,
+  #contact .contact_container .contact_right .contact_email .email-info {
+    width: 270px;
+  } */
   #contact .contact_container .contact_right {
-    padding-left: calc(100% - 410px);
+    width: 400px;
   }
 }
 /* Medium devices (tablets, less than 992px) */
@@ -126,9 +134,13 @@
   #testimonial .testimonial_container {
     padding: 52px 30px 77px 30px;
   }
+  #testimonial .testimonial_container > h2 {
+    font-size: 31px;
+  }
   /* education and skills*/
   #education-and-skills .education_container > h2 {
     margin-bottom: 80px;
+    font-size: 31px;
   }
   #education-and-skills .education_container {
     padding-left: 30px;
@@ -136,21 +148,33 @@
     padding: 100px 30px 125px 30px;
   }
   #education-and-skills .education_container .education_left {
-    width: 330px;
+    max-width: 330px;
   }
   #education-and-skills .education_container .education_right {
     width: 360px;
   }
   /* contact */
+  #contact .contact_container h2 {
+    font-size: 31px;
+  }
   .contact_container {
     padding-left: 30px;
     padding-right: 30px;
   }
+
   #contact .contact_container .contact_left {
-    width: 350px;
+    width: 340px;
+  }
+  #contact
+    .contact_container
+    .contact_left
+    form
+    textarea[name="textarea-message"] {
+    min-width: 340px;
+    max-width: 340px;
   }
   #contact .contact_container .contact_right {
-    padding-left: calc(100% - 320px);
+    width: 355px;
   }
 }
 
@@ -278,7 +302,6 @@
     float: none;
     margin: 0 auto;
     max-width: 400px;
-    width: 100%;
   }
   #education-and-skills .education_container .education_right {
     float: none;
@@ -294,12 +317,8 @@
     float: none;
     width: 100%;
   }
-  #contact .contact_container .contact_right {
-    margin-top: 90px;
-    padding-left: 0;
-    max-width: 400px;
-    margin-left: auto;
-    margin-right: auto;
+  #contact .contact_container .contact_left {
+    max-width: 100%;
   }
   #contact
     .contact_container
@@ -307,6 +326,29 @@
     form
     textarea[name="textarea-message"] {
     max-width: 100%;
+    min-width: 100%;
+  }
+  #contact .contact_container .contact_right {
+    margin-top: 90px;
+    width: 100%;
+    float: none;
+  }
+  #contact .contact_container .contact_right .contact_address .address-icon,
+  #contact .contact_container .contact_right .contact_phone .phone-icon,
+  #contact .contact_container .contact_right .contact_email .email-icon {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  #contact .contact_container .contact_right .contact_address .address-info,
+  #contact .contact_container .contact_right .contact_phone .phone-info,
+  #contact .contact_container .contact_right .contact_email .email-info {
+    padding-top: 75px;
+    display: block;
+    text-align: center;
+    padding-left: 0;
   }
   /* footer */
   #footer .footer_container {
@@ -316,4 +358,39 @@
 
 /* Extra small devices (portrait phones, less than 576px) */
 @media only screen and (max-width: 575.98px) {
+  /* header */
+  #header.header_container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  /* main */
+  #main .main_container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  /* portfolio */
+  #portfolio .portfolio_container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  /* career-path */
+  #career-path .career_container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  /* testimonials-path */
+  #testimonial .testimonial_container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  /* education and skills*/
+  #education-and-skills .education_container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  /* contact */
+  #contact .contact_container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 }

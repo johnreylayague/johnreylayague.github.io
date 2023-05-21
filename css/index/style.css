@@ -946,7 +946,8 @@ body {
 }
 .education_container .education_left {
   float: left;
-  width: 450px;
+  width: 100%;
+  max-width: 450px;
 }
 .education_container .education_left .education_school {
   padding-left: 30px;
@@ -1156,7 +1157,7 @@ body {
 }
 .contact_container .contact_left {
   float: left;
-  width: 552px;
+  width: 550px;
 }
 .contact_container .contact_left form input:not(:first-child) {
   margin-top: 16px;
@@ -1209,15 +1210,15 @@ body {
 .contact_container .contact_left form textarea[name="textarea-message"] {
   margin-top: 25px;
   display: block;
-  /* min-width: 552px; */
-  max-width: 552px;
-  width: 100%;
   border-radius: 8px;
   border: 0;
   min-height: 190px;
   max-height: 350px;
   padding: 20px 24px;
   background-color: var(--bg-white-1-color);
+  width: 100%;
+  max-width: 550px;
+  min-width: 550px;
 }
 .contact_container
   .contact_left
@@ -1291,22 +1292,21 @@ body {
   cursor: pointer;
 }
 .contact_container .contact_right {
-  padding-left: calc(100% - 550px);
+  float: right;
+  width: 500px;
 }
 .contact_container .contact_right .contact_address {
   display: block;
   position: relative;
 }
 .contact_container .contact_right .contact_address .address-icon {
-  display: inline-block;
-  width: 56px;
-  background-color: var(--bg-white-3-color);
-  height: 56px;
   position: absolute;
   left: 0;
-  border-radius: 16px;
+  top: 0;
+  width: 56px;
+  height: 56px;
 }
-.contact_container .contact_right .contact_address .address-icon::before {
+.contact_container .contact_right .contact_address .address-icon::after {
   position: absolute;
   content: url(../../icons/address-icon.svg);
   height: 24px;
@@ -1316,17 +1316,28 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
 }
+.contact_container .contact_right .contact_address .address-icon::before {
+  position: absolute;
+  content: "";
+  display: block;
+  background-color: var(--bg-white-3-color);
+  height: 100%;
+  width: 100%;
+  border-radius: 16px;
+}
+
 .contact_container .contact_right .contact_address .address-info {
-  display: inline-block;
-  vertical-align: top;
   padding-left: 80px;
+  display: block;
 }
 .contact_container .contact_right .contact_address h3 {
   font-weight: 500;
   display: block;
   font-family: "Inter", sans-serif;
   font-size: 16px;
+  line-height: 25px;
   color: var(--text-black-color);
+  word-break: break-word;
 }
 .contact_container .contact_right .contact_address address {
   margin-top: 14px;
@@ -1334,8 +1345,9 @@ body {
   font-weight: 500;
   font-family: "Inter", sans-serif;
   font-size: 14px;
-  line-height: 100%;
+  line-height: 25px;
   color: var(--text-gray-color);
+  word-break: break-word;
 }
 
 .contact_container .contact_right .contact_phone {
@@ -1344,15 +1356,22 @@ body {
   position: relative;
 }
 .contact_container .contact_right .contact_phone .phone-icon {
-  display: inline-block;
-  width: 56px;
-  background-color: var(--bg-white-3-color);
-  height: 56px;
   position: absolute;
   left: 0;
-  border-radius: 16px;
+  top: 0;
+  width: 56px;
+  height: 56px;
 }
 .contact_container .contact_right .contact_phone .phone-icon::before {
+  background-color: var(--bg-white-3-color);
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  border-radius: 16px;
+  display: block;
+}
+.contact_container .contact_right .contact_phone .phone-icon::after {
   position: absolute;
   content: url(../../icons/phone-icon.svg);
   height: 24px;
@@ -1363,9 +1382,8 @@ body {
   transform: translate(-50%, -50%);
 }
 .contact_container .contact_right .contact_phone .phone-info {
-  display: inline-block;
-  vertical-align: top;
   padding-left: 80px;
+  display: block;
 }
 .contact_container .contact_right .contact_phone .phone-info h3 {
   font-weight: 500;
@@ -1373,6 +1391,8 @@ body {
   font-family: "Inter", sans-serif;
   font-size: 16px;
   color: var(--text-black-color);
+  line-height: 25px;
+  word-break: break-word;
 }
 .contact_container .contact_right .contact_phone .phone-info a {
   margin-top: 14px;
@@ -1380,9 +1400,10 @@ body {
   font-weight: 500;
   font-family: "Inter", sans-serif;
   font-size: 14px;
-  line-height: 100%;
+  line-height: 25px;
   color: var(--text-gray-color);
   text-decoration: none;
+  word-break: break-word;
 }
 .contact_container .contact_right .contact_phone .phone-info a:hover {
   text-decoration: underline;
@@ -1394,15 +1415,25 @@ body {
   position: relative;
 }
 .contact_container .contact_right .contact_email .email-icon {
-  display: inline-block;
-  width: 56px;
-  background-color: var(--bg-white-3-color);
-  height: 56px;
   position: absolute;
   left: 0;
-  border-radius: 16px;
+  top: 0;
+  width: 56px;
+  height: 56px;
 }
 .contact_container .contact_right .contact_email .email-icon::before {
+  content: "";
+  background-color: var(--bg-white-3-color);
+  position: absolute;
+  display: block;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+
+  border-radius: 16px;
+}
+.contact_container .contact_right .contact_email .email-icon::after {
   position: absolute;
   content: url(../../icons/mail-icon.svg);
   height: 24px;
@@ -1413,9 +1444,8 @@ body {
   transform: translate(-50%, -50%);
 }
 .contact_container .contact_right .contact_email .email-info {
-  display: inline-block;
-  vertical-align: top;
   padding-left: 80px;
+  display: block;
 }
 .contact_container .contact_right .contact_email .email-info h3 {
   font-weight: 500;
@@ -1423,6 +1453,8 @@ body {
   font-family: "Inter", sans-serif;
   font-size: 16px;
   color: var(--text-black-color);
+  line-height: 25px;
+  word-break: break-word;
 }
 .contact_container .contact_right .contact_email .email-info a {
   margin-top: 14px;
@@ -1430,9 +1462,10 @@ body {
   font-weight: 500;
   font-family: "Inter", sans-serif;
   font-size: 14px;
-  line-height: 100%;
+  line-height: 25px;
   color: var(--text-gray-color);
   text-decoration: none;
+  word-break: break-word;
 }
 .contact_container .contact_right .contact_email .email-info a:hover {
   text-decoration: underline;

@@ -28,35 +28,29 @@ const owl_portfolio = $("#owl-carousel-portfolio");
 owl_portfolio.owlCarousel({
   loop: false,
   nav: false,
-  mouseDrag: false,
-  dots: false,
   lazyLoad: true,
   responsive: {
     0: {
       margin: 15,
       items: 1,
       dots: true,
+      mouseDrag: true,
     },
-    575: {
+    576: {
       margin: 15,
       items: 2,
-      dots: false,
+      dots: true,
+      mouseDrag: true,
     },
-    767: {
+    768: {
       margin: 15,
       items: 3,
       dots: false,
-    },
-    991: {
-      margin: 30,
-      items: 3,
-      dots: false,
+      mouseDrag: false,
     },
   },
 });
-owl_portfolio.on("loaded.owl.lazy", function (event) {
-  // Actions to perform when the images have finished loading
-});
+
 $("#owl-carousel-testimonial").owlCarousel({
   loop: false,
   nav: false,
@@ -67,16 +61,12 @@ $("#owl-carousel-testimonial").owlCarousel({
       margin: 15,
       items: 1,
     },
-    575: {
+    576: {
       margin: 15,
       items: 2,
     },
-    767: {
+    768: {
       margin: 15,
-      items: 3,
-    },
-    991: {
-      margin: 30,
       items: 3,
     },
   },
