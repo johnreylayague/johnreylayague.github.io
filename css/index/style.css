@@ -959,7 +959,9 @@ body {
 .education_container .education_left .education_school:last-child::after {
   height: 0%;
 }
-.education_container .education_left .education_school::before {
+.education_container
+  .education_left
+  .education_school:not(:last-of-type)::before {
   position: absolute;
   content: "";
   top: 2px;
