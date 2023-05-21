@@ -882,7 +882,7 @@ body {
   font-family: "Inter", sans-serif;
   line-height: 28px;
   color: var(--text-black-colorr);
-  min-height: 70px;
+  min-height: 65px;
   margin-bottom: 50px;
 }
 .testimonial_container section h2 {
@@ -891,9 +891,9 @@ body {
   font-family: "Plus Jakarta Sans", sans-serif;
   color: var(--text-black-colorr);
   word-break: break-word;
+  margin-bottom: 11px;
 }
 .testimonial_container section h3 {
-  margin-top: 16px;
   font-size: 12px;
   font-weight: 500;
   font-family: "Inter", sans-serif;
@@ -903,6 +903,9 @@ body {
   background-color: var(--bg-white-2-color);
   word-break: break-word;
   display: inline-block;
+}
+.testimonial_container section h3:not(:last-of-type) {
+  margin: 5px 10px 5px 0px;
 }
 /* education-and-skills */
 #education-and-skills {
@@ -943,7 +946,7 @@ body {
 }
 .education_container .education_left {
   float: left;
-  padding-right: calc(100% - 920px);
+  width: 450px;
 }
 .education_container .education_left .education_school {
   padding-left: 30px;
@@ -1001,6 +1004,9 @@ body {
   margin-bottom: 15px;
 }
 .education_container .education_right {
+  margin-top: -8px;
+  float: right;
+  width: 600px;
 }
 .education_container .education_right p {
   font-size: 16px;
@@ -1023,9 +1029,11 @@ body {
   height: 15px;
   background-color: var(--bg-white-3-color);
   border-radius: 2px 0px 0px 2px;
-  margin-bottom: 45px;
   position: relative;
   overflow: hidden;
+}
+.education_container .education_right .progress_bar:not(:last-of-type) {
+  margin-bottom: 45px;
 }
 .education_container .education_right .progress_bar::before {
   position: absolute;

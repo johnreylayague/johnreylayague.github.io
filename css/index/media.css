@@ -50,12 +50,12 @@
   /* portfolio */
   /* education and skills*/
   #education-and-skills .education_container .education_left {
-    padding-right: calc(100% - 840px);
+    width: 350px;
+  }
+  #education-and-skills .education_container .education_right {
+    width: 500px;
   }
   /* testimonials */
-  /* #testimonials .testimonial_container section {
-    height: 300px;
-  } */
   /* contact  */
   #contact .contact_container .contact_left {
   }
@@ -123,18 +123,23 @@
   }
 
   /* testimonials-path */
-  .testimonial_container {
-    padding-left: 30px;
-    padding-right: 30px;
+  #testimonial .testimonial_container {
+    padding: 52px 30px 77px 30px;
   }
   /* education and skills*/
-  .education_container {
+  #education-and-skills .education_container > h2 {
+    margin-bottom: 80px;
+  }
+  #education-and-skills .education_container {
     padding-left: 30px;
     padding-right: 30px;
+    padding: 100px 30px 125px 30px;
   }
-  /* education and skills*/
   #education-and-skills .education_container .education_left {
-    padding-right: calc(100% - 700px);
+    width: 330px;
+  }
+  #education-and-skills .education_container .education_right {
+    width: 360px;
   }
   /* contact */
   .contact_container {
@@ -256,30 +261,29 @@
   .career_container .career_list {
     text-align: center;
   }
-
+  /* testimonials-path */
   .testimonial_container {
     padding-left: 15px;
     padding-right: 15px;
   }
-
   .education_container {
     padding-left: 15px;
     padding-right: 15px;
   }
-
+  /* education and skills */
+  #education-and-skills .education_container {
+    text-align: center;
+  }
   #education-and-skills .education_container .education_left {
-    padding-right: 0;
-    width: 100%;
     float: none;
-  }
-  #education-and-skills .education_container .education_left .education_school {
-    max-width: 300px;
-    width: 100%;
     margin: 0 auto;
+    max-width: 400px;
+    width: 100%;
   }
-
   #education-and-skills .education_container .education_right {
-    margin-top: 90px;
+    float: none;
+    margin: 90px auto 0px auto;
+    width: 100%;
   }
   /* contact */
   .contact_container {
