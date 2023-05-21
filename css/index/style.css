@@ -1041,6 +1041,8 @@ body {
   content: "";
   background-color: var(--bg-purple-color);
   height: 100%;
+  left: 0;
+  top: 0;
 }
 .education_container .education_right .progress_bar::after {
   position: absolute;

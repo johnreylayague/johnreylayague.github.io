@@ -286,17 +286,17 @@
     text-align: center;
   }
   /* testimonials-path */
-  .testimonial_container {
+
+  #testimonial .testimonial_container {
     padding-left: 15px;
     padding-right: 15px;
-  }
-  .education_container {
-    padding-left: 15px;
-    padding-right: 15px;
+    text-align: center;
   }
   /* education and skills */
   #education-and-skills .education_container {
     text-align: center;
+    padding-left: 15px;
+    padding-right: 15px;
   }
   #education-and-skills .education_container .education_left {
     float: none;
@@ -310,8 +310,9 @@
   }
   /* contact */
   .contact_container {
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 15px;
+    padding-right: 15px;
+    text-align: center;
   }
   #contact .contact_container .contact_left {
     float: none;
@@ -350,47 +351,15 @@
     text-align: center;
     padding-left: 0;
   }
+
   /* footer */
   #footer .footer_container {
+    padding-left: 15px;
+    padding-right: 15px;
     height: 141px;
   }
 }
 
 /* Extra small devices (portrait phones, less than 576px) */
 @media only screen and (max-width: 575.98px) {
-  /* header */
-  #header.header_container {
-    padding-left: 15px;
-    padding-right: 15px;
-  }
-  /* main */
-  #main .main_container {
-    padding-left: 15px;
-    padding-right: 15px;
-  }
-  /* portfolio */
-  #portfolio .portfolio_container {
-    padding-left: 15px;
-    padding-right: 15px;
-  }
-  /* career-path */
-  #career-path .career_container {
-    padding-left: 15px;
-    padding-right: 15px;
-  }
-  /* testimonials-path */
-  #testimonial .testimonial_container {
-    padding-left: 15px;
-    padding-right: 15px;
-  }
-  /* education and skills*/
-  #education-and-skills .education_container {
-    padding-left: 15px;
-    padding-right: 15px;
-  }
-  /* contact */
-  #contact .contact_container {
-    padding-left: 15px;
-    padding-right: 15px;
-  }
 }
