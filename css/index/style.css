@@ -1,5 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+/* * {
+  outline: 1px dotted red;
+}
+*::before,
+*::after {
+  outline: 2px dotted black;
+}
+a {
+  outline: 2px dotted blue;
+} */
 
 /* reset */
 html,
@@ -89,6 +99,7 @@ video {
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
+  word-break: break-word;
 }
 /* HTML5 display-role reset for older browsers */
 article,
@@ -126,15 +137,18 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+
 /* preset */
 * {
   /* outline: 1px dotted var(--bg-purple-color); */
 }
+
 .clearfix::after {
   content: "";
-  display: table;
   clear: both;
+  display: table;
 }
+
 input,
 textarea {
   box-sizing: border-box;
@@ -380,7 +394,6 @@ body {
   font-size: 16px;
   line-height: 32px;
   font-family: "Inter", sans-serif;
-  word-wrap: break-word;
 }
 .main_container .main_content .main_social_media {
   margin-top: 45px;
@@ -885,7 +898,6 @@ body {
   font-weight: 500;
   font-family: "Plus Jakarta Sans", sans-serif;
   color: var(--text-black-colorr);
-  word-break: break-word;
   margin-bottom: 11px;
 }
 .testimonial_container section h3 {
@@ -896,7 +908,6 @@ body {
   padding: 4px 8px;
   border-radius: 4px;
   background-color: var(--bg-white-2-color);
-  word-break: break-word;
   display: inline-block;
 }
 .testimonial_container section h3:not(:last-of-type) {
@@ -941,8 +952,7 @@ body {
 }
 .education_container .education_left {
   float: left;
-  width: 100%;
-  max-width: 450px;
+  width: 37.5%;
 }
 .education_container .education_left .education_school {
   padding-left: 30px;
@@ -1000,7 +1010,7 @@ body {
 .education_container .education_right {
   margin-top: -8px;
   float: right;
-  width: 600px;
+  width: 50%;
 }
 .education_container .education_right p {
   font-size: 16px;
@@ -1018,99 +1028,88 @@ body {
   font-weight: 500;
   color: var(--text-black-color);
 }
-.education_container .education_right .progress_bar {
+.education_container .education_right .tech-list {
+}
+.education_container .education_right .tech-list li {
+  width: 45%;
+}
+.education_container .education_right .tech-list li:nth-child(1n + 1) {
+  float: left;
+}
+.education_container .education_right .tech-list li:nth-child(2n + 2) {
+  float: right;
+}
+.education_container .education_right .competency-percentage {
   margin-top: 20px;
   height: 15px;
-  background-color: var(--bg-white-3-color);
-  border-radius: 2px 0px 0px 2px;
+  border-radius: 2px;
   position: relative;
   overflow: hidden;
+  background-color: var(--bg-white-3-color);
 }
-.education_container .education_right .progress_bar:not(:last-of-type) {
-  margin-bottom: 45px;
-}
-.education_container .education_right .progress_bar::before {
+.education_container .education_right .competency-percentage::before {
   position: absolute;
   content: "";
+  top: 0;
+  left: 0;
+  display: block;
   background-color: var(--bg-purple-color);
   height: 100%;
-  left: 0;
-  top: 0;
 }
-.education_container .education_right .progress_bar::after {
+.education_container .education_right .competency-percentage::after {
   position: absolute;
   font-size: 12px;
   font-weight: 500;
   font-family: "Inter", sans-serif;
-  color: var(--text-white-color);
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+  content: attr(data-percentage) "%";
+  display: block;
 }
-.education_container .education_right .progress_bar:nth-of-type(1)::before {
-  width: 60%;
+.competency-percentage[data-percentage^="10"]::after,
+.competency-percentage[data-percentage^="20"]::after,
+.competency-percentage[data-percentage^="30"]::after,
+.competency-percentage[data-percentage^="40"]::after,
+.competency-percentage[data-percentage^="50"]::after {
+  color: var(--text-black-color);
 }
-.education_container .education_right .progress_bar:nth-of-type(1)::after {
-  content: "60%";
+.competency-percentage[data-percentage^="60"]::after,
+.competency-percentage[data-percentage^="70"]::after,
+.competency-percentage[data-percentage^="80"]::after,
+.competency-percentage[data-percentage^="90"]::after,
+.competency-percentage[data-percentage^="100"]::after {
+  color: var(--text-white-color);
 }
-
-.education_container .education_right .progress_bar:nth-of-type(2)::before {
-  width: 60%;
+.competency-percentage[data-percentage^="10"]::before {
+  width: 10%;
 }
-.education_container .education_right .progress_bar:nth-of-type(2)::after {
-  content: "60%";
+.competency-percentage[data-percentage^="20"]::before {
+  width: 20%;
 }
-
-.education_container .education_right .progress_bar:nth-of-type(3)::before {
+.competency-percentage[data-percentage^="30"]::before {
+  width: 30%;
+}
+.competency-percentage[data-percentage^="40"]::before {
   width: 40%;
 }
-.education_container .education_right .progress_bar:nth-of-type(3)::after {
-  content: "40%";
-  color: var(--text-black-color);
-}
-
-.education_container .education_right .progress_bar:nth-of-type(4)::before {
-  width: 75%;
-}
-.education_container .education_right .progress_bar:nth-of-type(4)::after {
-  content: "75%";
-}
-
-.education_container .education_right .progress_bar:nth-of-type(5)::before {
-  width: 75%;
-}
-.education_container .education_right .progress_bar:nth-of-type(5)::after {
-  content: "75%";
-}
-
-.education_container .education_right .progress_bar:nth-of-type(6)::before {
-  width: 60%;
-}
-.education_container .education_right .progress_bar:nth-of-type(6)::after {
-  content: "60%";
-}
-
-.education_container .education_right .progress_bar:nth-of-type(7)::before {
-  width: 60%;
-}
-.education_container .education_right .progress_bar:nth-of-type(7)::after {
-  content: "60%";
-}
-
-.education_container .education_right .progress_bar:nth-of-type(8)::before {
+.competency-percentage[data-percentage^="50"]::before {
   width: 50%;
 }
-.education_container .education_right .progress_bar:nth-of-type(8)::after {
-  content: "50%";
-  color: var(--text-black-color);
+.competency-percentage[data-percentage^="60"]::before {
+  width: 60%;
 }
-
-.education_container .education_right .progress_bar:nth-of-type(9)::before {
-  width: 50%;
+.competency-percentage[data-percentage^="70"]::before {
+  width: 70%;
 }
-.education_container .education_right .progress_bar:nth-of-type(9)::after {
-  content: "50%";
-  color: var(--text-black-color);
+.competency-percentage[data-percentage^="80"]::before {
+  width: 80%;
+}
+.competency-percentage[data-percentage^="90"]::before {
+  width: 90%;
+}
+.competency-percentage[data-percentage^="100"]::before {
+  width: 100%;
 }
 
 /* contact */
@@ -1152,7 +1151,8 @@ body {
 }
 .contact_container .contact_left {
   float: left;
-  width: 550px;
+  /* width: 550px; */
+  width: 47%;
 }
 .contact_container .contact_left form input:not(:first-child) {
   margin-top: 16px;
@@ -1212,8 +1212,8 @@ body {
   padding: 20px 24px;
   background-color: var(--bg-white-1-color);
   width: 100%;
-  max-width: 550px;
-  min-width: 550px;
+  max-width: 100%;
+  min-width: 100%;
 }
 .contact_container
   .contact_left
@@ -1288,7 +1288,8 @@ body {
 }
 .contact_container .contact_right {
   float: right;
-  width: 500px;
+  /* width: 500px; */
+  width: 41%;
 }
 .contact_container .contact_right .contact_address {
   display: block;
@@ -1332,7 +1333,6 @@ body {
   font-size: 16px;
   line-height: 25px;
   color: var(--text-black-color);
-  word-break: break-word;
 }
 .contact_container .contact_right .contact_address address {
   margin-top: 14px;
@@ -1342,7 +1342,6 @@ body {
   font-size: 14px;
   line-height: 25px;
   color: var(--text-gray-color);
-  word-break: break-word;
 }
 
 .contact_container .contact_right .contact_phone {
@@ -1387,7 +1386,6 @@ body {
   font-size: 16px;
   color: var(--text-black-color);
   line-height: 25px;
-  word-break: break-word;
 }
 .contact_container .contact_right .contact_phone .phone-info a {
   margin-top: 14px;
@@ -1398,7 +1396,6 @@ body {
   line-height: 25px;
   color: var(--text-gray-color);
   text-decoration: none;
-  word-break: break-word;
 }
 .contact_container .contact_right .contact_phone .phone-info a:hover {
   text-decoration: underline;
@@ -1449,7 +1446,6 @@ body {
   font-size: 16px;
   color: var(--text-black-color);
   line-height: 25px;
-  word-break: break-word;
 }
 .contact_container .contact_right .contact_email .email-info a {
   margin-top: 14px;
@@ -1460,7 +1456,6 @@ body {
   line-height: 25px;
   color: var(--text-gray-color);
   text-decoration: none;
-  word-break: break-word;
 }
 .contact_container .contact_right .contact_email .email-info a:hover {
   text-decoration: underline;

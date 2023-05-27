@@ -43,33 +43,8 @@
   }
   /* portfolio */
   /* education and skills*/
-  #education-and-skills .education_container .education_left {
-    max-width: 350px;
-  }
-  #education-and-skills .education_container .education_right {
-    width: 500px;
-  }
   /* testimonials */
   /* contact  */
-  #contact .contact_container .contact_left {
-    width: 450px;
-  }
-  #contact
-    .contact_container
-    .contact_left
-    form
-    textarea[name="textarea-message"] {
-    max-width: 450px;
-    min-width: 450px;
-  }
-  /* #contact .contact_container .contact_right .contact_address .address-info,
-  #contact .contact_container .contact_right .contact_phone .phone-info,
-  #contact .contact_container .contact_right .contact_email .email-info {
-    width: 270px;
-  } */
-  #contact .contact_container .contact_right {
-    width: 400px;
-  }
 }
 /* Medium devices (tablets, less than 992px) */
 @media only screen and (max-width: 991.98px) {
@@ -147,12 +122,6 @@
     padding-right: 30px;
     padding: 100px 30px 125px 30px;
   }
-  #education-and-skills .education_container .education_left {
-    max-width: 330px;
-  }
-  #education-and-skills .education_container .education_right {
-    width: 360px;
-  }
   /* contact */
   #contact .contact_container h2 {
     font-size: 31px;
@@ -160,21 +129,6 @@
   .contact_container {
     padding-left: 30px;
     padding-right: 30px;
-  }
-
-  #contact .contact_container .contact_left {
-    width: 340px;
-  }
-  #contact
-    .contact_container
-    .contact_left
-    form
-    textarea[name="textarea-message"] {
-    min-width: 340px;
-    max-width: 340px;
-  }
-  #contact .contact_container .contact_right {
-    width: 355px;
   }
 }
 
@@ -293,20 +247,24 @@
     text-align: center;
   }
   /* education and skills */
-  #education-and-skills .education_container {
-    text-align: center;
-    padding-left: 15px;
-    padding-right: 15px;
-  }
   #education-and-skills .education_container .education_left {
     float: none;
     margin: 0 auto;
     max-width: 400px;
+    width: 100%;
   }
   #education-and-skills .education_container .education_right {
     float: none;
     margin: 90px auto 0px auto;
     width: 100%;
+  }
+  #education-and-skills .education_container .education_left .education_school {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  #education-and-skills .education_container .education_right .tech-list li {
+    width: 100%;
+    float: none;
   }
   /* contact */
   .contact_container {
