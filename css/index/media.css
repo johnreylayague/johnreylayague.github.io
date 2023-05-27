@@ -247,6 +247,11 @@
     text-align: center;
   }
   /* education and skills */
+  #education-and-skills .education_container {
+    padding-left: 15px;
+    padding-right: 15px;
+    text-align: center;
+  }
   #education-and-skills .education_container .education_left {
     float: none;
     margin: 0 auto;
@@ -257,10 +262,6 @@
     float: none;
     margin: 90px auto 0px auto;
     width: 100%;
-  }
-  #education-and-skills .education_container .education_left .education_school {
-    padding-left: 30px;
-    padding-right: 30px;
   }
   #education-and-skills .education_container .education_right .tech-list li {
     width: 100%;
@@ -320,4 +321,12 @@
 
 /* Extra small devices (portrait phones, less than 576px) */
 @media only screen and (max-width: 575.98px) {
+  #education-and-skills
+    .education_container
+    .education_left
+    .education_school
+    li {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 }

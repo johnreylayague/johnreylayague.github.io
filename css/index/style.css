@@ -954,16 +954,17 @@ body {
   float: left;
   width: 37.5%;
 }
-.education_container .education_left .education_school {
+.education_container .education_left .education_school li {
   padding-left: 30px;
   position: relative;
 }
-.education_container .education_left .education_school:not(:last-child) {
+.education_container .education_left .education_school li:not(:last-child) {
   padding-bottom: 50px;
 }
 .education_container
   .education_left
-  .education_school:not(:last-of-type)::before {
+  .education_school
+  li:not(:last-child)::before {
   position: absolute;
   content: "";
   top: 2px;
@@ -971,7 +972,7 @@ body {
   border-left: 1px solid var(--border-color);
   height: 100%;
 }
-.education_container .education_left .education_school::after {
+.education_container .education_left .education_school li::after {
   position: absolute;
   left: -10px;
   top: -10px;
@@ -979,27 +980,27 @@ body {
   font-size: 35px;
   color: var(--border-color);
 }
-.education_container .education_left .education_school h3 {
+.education_container .education_left .education_school li h3 {
   font-size: 16px;
   font-family: "Plus Jakarta Sans", sans-serif;
   font-weight: 500;
   color: var(--text-black-color);
 }
-.education_container .education_left .education_school h4 {
+.education_container .education_left .education_school li h4 {
   margin-top: 15px;
   font-size: 14px;
   font-family: "Inter", sans-serif;
   font-weight: 400;
   color: var(--text-gray-color);
 }
-.education_container .education_left .education_school address {
+.education_container .education_left .education_school li address {
   margin-top: 15px;
   font-size: 14px;
   font-family: "Inter", sans-serif;
   font-weight: 400;
   color: var(--text-black-color);
 }
-.education_container .education_left .education_school h5 {
+.education_container .education_left .education_school li h5 {
   margin-top: 15px;
   font-size: 14px;
   font-family: "Inter", sans-serif;
