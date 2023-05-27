@@ -306,8 +306,9 @@ $("#nav_edu_skills").click(function (e) {
 $(document).on("scroll", function () {
   let get_height = $("main").offset().top;
   let scroll_height = $(window).scrollTop();
+  let sidebar = $(".mobile_nav_list > ul").is(".is-open");
 
-  if (scroll_height >= get_height || scroll_height != 0) {
+  if (scroll_height >= get_height || scroll_height != 0 || sidebar != false) {
     $("#header").addClass("shadow");
   } else {
     $("#header").removeClass("shadow");
