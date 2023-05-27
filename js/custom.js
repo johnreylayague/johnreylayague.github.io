@@ -246,5 +246,20 @@ $(".mobile_nav_list > #theme-change").click(function (e) {
 });
 
 $("#three-bar").click(function (e) {
+  let scroll_height = $(window).scrollTop();
+  if (scroll_height == 0) {
+    $("#header").toggleClass("shadow");
+  }
   $(".mobile_nav_list > ul").toggleClass("is-open");
+});
+
+$(document).on("scroll", function () {
+  let get_height = $("main").offset().top;
+  let scroll_height = $(window).scrollTop();
+
+  if (scroll_height >= get_height || scroll_height != 0) {
+    $("#header").addClass("shadow");
+  } else {
+    $("#header").removeClass("shadow");
+  }
 });
