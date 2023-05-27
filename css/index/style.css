@@ -250,8 +250,9 @@ body {
 /* header */
 #header {
   background-color: var(--bg-white-1-color);
-  z-index: 150;
   width: 100%;
+  min-height: 130px;
+  z-index: 150;
 }
 .header_container {
   text-align: center;

@@ -139,6 +139,7 @@
   }
   #header {
     position: fixed;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   }
   #header .header_container .mobile_nav_list {
     display: block;
@@ -187,7 +188,7 @@
   #header .header_container .mobile_nav_list ul {
     position: fixed;
     height: 100vh;
-    top: 130px;
+    top: 131px;
     right: 0;
     background: #fff;
     box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
