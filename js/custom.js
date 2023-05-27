@@ -173,6 +173,11 @@ $(window).on("resize", function (e) {
 $(window).on("load", function () {
   let divHeight = $("section#" + localStorage.career_id + "");
   let i = false;
+  let scroll_height = $(window).scrollTop();
+
+  if (scroll_height != 0) {
+    $("#header").addClass("shadow");
+  }
 
   $(".career_list > ul > li > a").each(function (key, value) {
     if (localStorage.career_id != "" && localStorage.career_id == value.id) {
@@ -246,11 +251,56 @@ $(".mobile_nav_list > #theme-change").click(function (e) {
 });
 
 $("#three-bar").click(function (e) {
+  e.preventDefault();
   let scroll_height = $(window).scrollTop();
   if (scroll_height == 0) {
     $("#header").toggleClass("shadow");
   }
   $(".mobile_nav_list > ul").toggleClass("is-open");
+});
+
+const height = $("#header").height();
+
+$("#nav_portfolio").click(function (e) {
+  e.preventDefault();
+
+  $("html, body").animate(
+    { scrollTop: $("#portfolio").offset().top - height },
+    1000
+  );
+});
+
+$("#nav_home").click(function (e) {
+  e.preventDefault();
+  $("html, body").animate({ scrollTop: 0 }, 1000);
+});
+
+// $("#nav_experience").click(function (e) {
+
+//   e.preventDefault();
+
+//   $("html, body").animate(
+//     { scrollTop: $("#portfolio").offset().top - height },
+//     1000
+//   );
+// });
+
+$("#nav_testimonial").click(function (e) {
+  e.preventDefault();
+
+  $("html, body").animate(
+    { scrollTop: $("#testimonial").offset().top - height },
+    1000
+  );
+});
+
+$("#nav_edu_skills").click(function (e) {
+  e.preventDefault();
+
+  $("html, body").animate(
+    { scrollTop: $("#education-and-skills").offset().top - height },
+    1000
+  );
 });
 
 $(document).on("scroll", function () {
