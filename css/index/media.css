@@ -124,9 +124,22 @@
 /* Small devices (landscape phones, less than 768px) */
 @media only screen and (max-width: 767.98px) {
   /* header */
-  .header_container {
+
+  #header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 90px !important;
+    width: 100%;
+    display: block;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  }
+  #header .header_container {
     padding-left: 15px;
     padding-right: 15px;
+  }
+  #header .header_container .header_logo {
+    margin-top: 27px;
   }
   #header .header_container .nav_list {
     display: none;
@@ -137,13 +150,9 @@
   #header .header_container .nav_bar {
     display: block;
   }
-  #header {
-    position: fixed;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  }
   #header .header_container .mobile_nav_list {
     display: block;
-    margin-top: 47px;
+    margin-top: 33px;
     position: relative;
     float: right;
   }
@@ -156,16 +165,16 @@
   }
   #header .header_container .mobile_nav_list #theme-change {
     position: relative;
-    height: 36px;
-    width: 36px;
+    height: 26px;
+    width: 26px;
     display: inline-block;
     vertical-align: middle;
     margin-right: 25px;
   }
   #header .header_container .mobile_nav_list #three-bar {
     position: relative;
-    height: 36px;
-    width: 36px;
+    height: 26px;
+    width: 26px;
     display: inline-block;
     vertical-align: middle;
   }
@@ -187,16 +196,17 @@
   }
   #header .header_container .mobile_nav_list ul {
     position: fixed;
-    height: 100vh;
-    top: 131px;
+    height: calc(100vh - 90px);
+    top: 90px;
     right: 0;
     background: #fff;
-    box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+    box-shadow: rgba(0, 0, 0, 0.15) -1.95px -1.25px 2.6px;
     width: 100%;
-    max-width: 360px;
+    max-width: 260px;
     display: block;
     transform: translateX(100%);
     transition: transform 0.3s ease-in;
+    z-index: -1;
   }
   #header .header_container .mobile_nav_list ul.is-open {
     transform: translateX(0);
@@ -209,11 +219,14 @@
     padding: 0 15px;
     font-size: 16px;
     font-family: "Inter", sans-serif;
-    font-weight: 400;
+    font-weight: 500;
     color: var(--text-black-color);
     line-height: 50px;
   }
   /* main */
+  #main {
+    margin-top: 90px !important;
+  }
   #main .main_container .main_content {
     width: 100%;
     text-align: center;
