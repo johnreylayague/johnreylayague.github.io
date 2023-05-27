@@ -250,6 +250,8 @@ body {
 /* header */
 #header {
   background-color: var(--bg-white-1-color);
+  z-index: 150;
+  width: 100%;
 }
 .header_container {
   text-align: center;
@@ -258,6 +260,9 @@ body {
 .header_container .header_logo {
   margin-top: 40px;
   float: left;
+}
+.header_container .mobile_nav_list {
+  display: none;
 }
 .header_container figure img {
   max-width: 100%;
@@ -320,18 +325,11 @@ body {
   font-weight: 500;
   color: var(--text-black-color);
 }
-.header_container button {
-  display: none;
-  margin-top: 47px;
-  float: right;
-  border: 0;
-  background-color: transparent;
-}
 .header_container button:active {
   background-color: #7e74f154;
   border-radius: 5px;
 }
-.header_container .three-bars-icon {
+.header_container .mobile_nav_list .three-bars-icon {
   display: block;
   background: url(../../icons/three-bars-icon.svg);
   content: "";

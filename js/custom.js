@@ -219,9 +219,7 @@ $(window).on("load", function () {
   }
 });
 
-$("#theme-change").click(function (e) {
-  e.preventDefault();
-
+function SwitchTheme() {
   if ($("body").hasClass("light")) {
     $("body").removeClass("light").addClass("dark");
     $("#theme-change")
@@ -237,4 +235,30 @@ $("#theme-change").click(function (e) {
       .addClass("moon-icon");
     localStorage.setItem("theme_style", "light");
   }
+}
+$("#theme-change").click(function (e) {
+  e.preventDefault();
+  SwitchTheme();
+});
+$(".mobile_nav_list > #theme-change").click(function (e) {
+  e.preventDefault();
+  if ($("body").hasClass("light")) {
+    $("body").removeClass("light").addClass("dark");
+    $("#theme-change")
+      .find("span")
+      .removeClass("moon-icon")
+      .addClass("sun-icon");
+    localStorage.setItem("theme_style", "dark");
+  } else {
+    $("body").removeClass("dark").addClass("light");
+    $("#theme-change")
+      .find("span")
+      .removeClass("sun-icon")
+      .addClass("moon-icon");
+    localStorage.setItem("theme_style", "light");
+  }
+});
+
+$("#three-bar").click(function (e) {
+  $(".mobile_nav_list > ul").toggleClass("is-open");
 });
