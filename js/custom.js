@@ -261,31 +261,20 @@ $("#three-bar").click(function (e) {
 
 const height = $("#header").height();
 
-$("#nav_portfolio").click(function (e) {
+$("#nav_portfolio,#mobile_nav_portfolio").click(function (e) {
   e.preventDefault();
-
   $("html, body").animate(
     { scrollTop: $("#portfolio").offset().top - height },
     1000
   );
 });
 
-$("#nav_home").click(function (e) {
+$("#nav_home,#mobile_nav_home").click(function (e) {
   e.preventDefault();
   $("html, body").animate({ scrollTop: 0 }, 1000);
 });
 
-// $("#nav_experience").click(function (e) {
-
-//   e.preventDefault();
-
-//   $("html, body").animate(
-//     { scrollTop: $("#portfolio").offset().top - height },
-//     1000
-//   );
-// });
-
-$("#nav_testimonial").click(function (e) {
+$("#nav_testimonial,#mobile_nav_testimonial").click(function (e) {
   e.preventDefault();
 
   $("html, body").animate(
@@ -294,7 +283,7 @@ $("#nav_testimonial").click(function (e) {
   );
 });
 
-$("#nav_edu_skills").click(function (e) {
+$("#nav_edu_skills,#mobile_nav_edu_skills").click(function (e) {
   e.preventDefault();
 
   $("html, body").animate(
@@ -303,8 +292,17 @@ $("#nav_edu_skills").click(function (e) {
   );
 });
 
+$("#nav_contact_us,#mobile_nav_contact_us").click(function (e) {
+  e.preventDefault();
+
+  $("html, body").animate(
+    { scrollTop: $("#contact").offset().top - height },
+    1000
+  );
+});
+
 $(document).on("scroll", function () {
-  let get_height = $("main").offset().top;
+  let get_height = $("#header").offset().top;
   let scroll_height = $(window).scrollTop();
   let sidebar = $(".mobile_nav_list > ul").is(".is-open");
 
