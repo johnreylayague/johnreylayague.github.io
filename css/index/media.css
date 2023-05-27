@@ -252,6 +252,13 @@
     padding-right: 15px;
     text-align: center;
   }
+  #education-and-skills
+    .education_container
+    .education_left
+    .education_school
+    li {
+    padding-left: 0;
+  }
   #education-and-skills .education_container .education_left {
     float: none;
     margin: 0 auto;
