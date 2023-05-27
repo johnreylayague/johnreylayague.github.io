@@ -41,6 +41,9 @@
   #header .header_container .nav_list li + li {
     margin-left: 25px;
   }
+  #header .header_container .header_right li + li::before {
+    margin-right: 25px;
+  }
   /* portfolio */
   /* education and skills*/
   /* testimonials */
