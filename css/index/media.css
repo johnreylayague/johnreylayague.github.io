@@ -133,6 +133,7 @@
     width: 100%;
     display: block;
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    z-index: 1;
   }
   #header .header_container {
     padding-left: 15px;
@@ -206,7 +207,6 @@
     display: block;
     transform: translateX(100%);
     transition: transform 0.3s ease-in;
-    z-index: -1;
   }
   #header .header_container .mobile_nav_list ul.is-open {
     transform: translateX(0);
