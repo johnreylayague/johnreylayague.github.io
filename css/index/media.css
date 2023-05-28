@@ -52,13 +52,10 @@
 /* Medium devices (tablets, less than 992px) */
 @media only screen and (max-width: 991.98px) {
   /* header */
-  .header_container {
+  #header .header_container {
     padding-left: 30px;
     padding-right: 30px;
-  }
-  #side_bar {
-    height: 100%;
-    width: 100%;
+    text-align: left;
   }
   #header .header_container .nav_list {
     display: none;
@@ -97,9 +94,6 @@
     display: inline-block;
     vertical-align: middle;
   }
-  #header .header_container .mobile_nav_list.p-r-sidebar {
-    padding-right: 260px;
-  }
   #header .header_container .mobile_nav_list #three-bar::after {
     position: absolute;
     top: 0;
@@ -118,6 +112,35 @@
   }
   #header .header_container .mobile_nav_list ul li {
     position: relative;
+    padding: 0 30px;
+  }
+  #header .header_container .mobile_nav_list ul li:not(:first-child) {
+    padding: 10px 30px;
+  }
+  #header .header_container .mobile_nav_list ul li:first-child {
+    height: 130px;
+    box-sizing: border-box;
+  }
+  #header .header_container .mobile_nav_list ul li:first-child a:first-of-type {
+    margin-top: 48px;
+    display: inline-block;
+  }
+  #header .header_container .mobile_nav_list ul li #mobile_nav_bar {
+    position: absolute;
+    top: 55px;
+    right: 30px;
+    height: 26px;
+    width: 26px;
+  }
+  #header .header_container .mobile_nav_list ul li #mobile_nav_bar::after {
+    position: absolute;
+    content: url(/icons/three-bars-icon.svg);
+    top: 0;
+    right: 0;
+    display: block;
+    height: 26px;
+    width: 26px;
+    max-width: 100%;
   }
   #header .header_container .mobile_nav_list ul {
     position: fixed;
@@ -125,36 +148,38 @@
     top: 0;
     right: 0;
     background: #fff;
-    box-shadow: rgba(0, 0, 0, 0.15) -1.95px 1.25px 2.6px;
+    box-shadow: rgba(4, 3, 3, 0.15) -1.95px 1.25px 2.6px;
     width: 100%;
     max-width: 260px;
     display: block;
     transform: translateX(100%);
     transition: transform 0.3s ease-in;
     z-index: 150;
+    overflow: auto;
   }
   #header .header_container .mobile_nav_list ul.is-open {
     transform: translateX(0);
   }
-  #header .header_container .mobile_nav_list ul li:first-child a {
-    height: 130px;
+  #header .header_container .mobile_nav_list ul li:last-child {
+    padding-bottom: 48px;
   }
   #header .header_container .mobile_nav_list ul li a {
     text-decoration: none;
-    padding: 0 15px;
     font-size: 16px;
     font-family: "Inter", sans-serif;
     font-weight: 500;
     color: var(--text-black-color);
-    line-height: 50px;
+    line-height: 25px;
+    display: block;
   }
+
   #header .header_container .mobile_nav_list ul li a figure {
-    padding-top: 48px;
+    height: 41px;
+    width: 140px;
   }
   #header .header_container .mobile_nav_list ul li a figure img {
     max-width: 100%;
     display: block;
-    margin: 0 auto;
   }
 
   /* main */
@@ -227,7 +252,6 @@
 /* Small devices (landscape phones, less than 768px) */
 @media only screen and (max-width: 767.98px) {
   /* header */
-
   #header {
     height: 90px !important;
   }
@@ -256,80 +280,27 @@
   #header .header_container .nav_bar {
     display: block;
   }
-  #header .header_container .mobile_nav_list {
-    display: block;
-    margin-top: 33px;
-    position: relative;
-    float: right;
+  #header .header_container .mobile_nav_list ul li {
+    padding: 0 15px;
   }
-  #header .header_container .mobile_nav_list a {
-    display: block;
-  }
-  #header .header_container .mobile_nav_list #theme-change {
-    position: relative;
-    height: 26px;
-    width: 26px;
-    display: inline-block;
-    vertical-align: middle;
-    margin-right: 25px;
-  }
-  #header .header_container .mobile_nav_list #three-bar {
-    position: relative;
-    height: 26px;
-    width: 26px;
-    display: inline-block;
-    vertical-align: middle;
-  }
-  #header .header_container .mobile_nav_list #three-bar::after {
-    position: absolute;
-    top: 0;
-    left: 0;
-    content: url(/icons/three-bars-icon.svg);
-    display: block;
-    width: 100%;
-  }
-  #header .header_container .mobile_nav_list #theme-change::after {
-    position: absolute;
-    top: 0;
-    left: 0;
-    content: url(/icons/moon-icon.svg);
-    display: block;
-    width: 100%;
-  }
-  #header .header_container .mobile_nav_list ul li a figure {
-    padding-top: 27px;
-  }
-  #header .header_container .mobile_nav_list ul {
-    position: fixed;
-    height: 100vh;
-    top: 0;
-    right: 0;
-    background: #fff;
-    box-shadow: rgba(0, 0, 0, 0.15) -1.95px 1.25px 2.6px;
-    width: 100%;
-    max-width: 260px;
-    display: block;
-    transform: translateX(100%);
-    transition: transform 0.3s ease-in;
-    z-index: 150;
-  }
-  #header .header_container .mobile_nav_list ul.is-open {
-    transform: translateX(0);
-  }
-  #header .header_container .mobile_nav_list ul li:first-child a {
+  #header .header_container .mobile_nav_list ul li:first-child {
     height: 90px;
   }
-  #header .header_container .mobile_nav_list.p-r-sidebar {
-    padding-right: 280px;
+  #header .header_container .mobile_nav_list ul li:first-child a:first-of-type {
+    margin-top: 27px;
   }
-  #header .header_container .mobile_nav_list ul li a {
-    text-decoration: none;
-    padding: 0 15px;
-    font-size: 16px;
-    font-family: "Inter", sans-serif;
-    font-weight: 500;
-    color: var(--text-black-color);
-    line-height: 50px;
+  #header .header_container .mobile_nav_list {
+    margin-top: 34px;
+  }
+  #header .header_container .mobile_nav_list ul li #mobile_nav_bar {
+    top: 34px;
+    right: 15px;
+  }
+  #header .header_container .mobile_nav_list ul li:not(:first-child) {
+    padding: 10px 15px;
+  }
+  #header .header_container .mobile_nav_list ul li:last-child {
+    padding-bottom: 40px;
   }
   /* main */
   #main {

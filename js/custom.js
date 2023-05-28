@@ -250,10 +250,9 @@ $(".mobile_nav_list > #theme-change").click(function (e) {
   SwitchTheme();
 });
 
-$("#three-bar").click(function (e) {
+$("#three-bar,#mobile_nav_bar").click(function (e) {
   e.preventDefault();
   $(".mobile_nav_list > ul").toggleClass("is-open");
-  $(".mobile_nav_list").toggleClass("p-r-sidebar");
 });
 
 const height = $("#header").height();
