@@ -300,24 +300,6 @@ $("#three-bar").click(function (e) {
 
   if ($("#sideBarLayer").css("display") == "block") {
     $("#sideBarLayer").removeClass("opacity-0").addClass("opacity-1");
-  } else if (
-    $("#sideBarLayer").css("display") == "block" &&
-    $("#sideBarLayer").css("opacity") == "1"
-  ) {
-    // Transition
-    $(".opacity-0").on(
-      "transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd",
-      function () {
-        // Transition has ended, do something here
-        $(".mobile_nav_list > ul").removeClass("is-open");
-        $("#sideBarLayer").removeClass("show");
-        $("body").removeClass("onscroll");
-        // Remove the event handler if needed
-        $(".opacity-0").off(
-          "transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd"
-        );
-      }
-    );
   }
 });
 
@@ -331,7 +313,9 @@ $("#mobile_nav_bar,#sideBarLayer").click(function (e) {
     function () {
       // Transition has ended, do something here
 
+      $(".mobile_nav_list > ul").removeClass("is-open");
       $("#sideBarLayer").removeClass("show");
+      $("body").removeClass("onscroll");
       // Remove the event handler if needed
       $(".opacity-0").off(
         "transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd"
