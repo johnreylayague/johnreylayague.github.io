@@ -297,10 +297,9 @@ $("#three-bar,#mobile_nav_bar,#sideBarLayer").click(function (e) {
 
   $(".mobile_nav_list > ul").toggleClass("is-open");
 
-  $("body").toggleClass("onscroll");
-
   if ($("#sideBarLayer").css("display") == "none") {
-    $("#sideBarLayer").addClass("show");
+    $("#sideBarLayer").toggleClass("show");
+    $("body").toggleClass("onscroll");
   } else if ($("#sideBarLayer").css("display") == "block") {
     $("#sideBarLayer").removeClass("opacity-1").addClass("opacity-0");
   }
@@ -315,13 +314,14 @@ $("#three-bar,#mobile_nav_bar,#sideBarLayer").click(function (e) {
     $("#sideBarLayer").css("opacity") == "1"
   ) {
     // Transition
-    $("#sideBarLayer").addClass("pointer-none");
+    $("#sideBarLayer").toggleClass("pointer-none");
     $(".opacity-0").on(
       "transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd",
       function () {
         // Transition has ended, do something here
 
-        $("#sideBarLayer").removeClass("show").removeClass("pointer-none");
+        $("#sideBarLayer").toggleClass("show").toggleClass("pointer-none");
+        $("body").toggleClass("onscroll");
 
         // Remove the event handler if needed
         $(".opacity-0").off(
