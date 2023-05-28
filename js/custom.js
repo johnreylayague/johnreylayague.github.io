@@ -252,11 +252,8 @@ $(".mobile_nav_list > #theme-change").click(function (e) {
 
 $("#three-bar").click(function (e) {
   e.preventDefault();
-  let scroll_height = $(window).scrollTop();
-  if (scroll_height == 0) {
-    $("#header").toggleClass("shadow");
-  }
   $(".mobile_nav_list > ul").toggleClass("is-open");
+  $(".mobile_nav_list").toggleClass("p-r-sidebar");
 });
 
 const height = $("#header").height();
@@ -306,9 +303,13 @@ $(document).on("scroll", function () {
   let scroll_height = $(window).scrollTop();
   let sidebar = $(".mobile_nav_list > ul").is(".is-open");
 
-  if (scroll_height >= get_height || scroll_height != 0 || sidebar != false) {
+  if (scroll_height > get_height || scroll_height != 0) {
     $("#header").addClass("shadow");
+    console.log("addClass shadow");
+    console.log(scroll_height);
   } else {
     $("#header").removeClass("shadow");
+    console.log("removeClass shadow");
+    console.log(scroll_height);
   }
 });
