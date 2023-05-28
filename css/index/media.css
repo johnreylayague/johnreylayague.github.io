@@ -52,6 +52,9 @@
 /* Medium devices (tablets, less than 992px) */
 @media only screen and (max-width: 991.98px) {
   /* header */
+  #header {
+    height: 90px !important;
+  }
   #header .header_container {
     padding-left: 30px;
     padding-right: 30px;
@@ -67,11 +70,11 @@
     display: block;
   }
   #header .header_container .header_logo {
-    margin-top: 48px;
+    margin-top: 27px;
   }
   #header .header_container .mobile_nav_list {
     display: block;
-    margin-top: 57px;
+    margin-top: 34px;
     position: relative;
     float: right;
     transition: padding-right 0.3s ease-in;
@@ -118,16 +121,16 @@
     padding: 10px 30px;
   }
   #header .header_container .mobile_nav_list ul li:first-child {
-    height: 130px;
+    height: 90px;
     box-sizing: border-box;
   }
   #header .header_container .mobile_nav_list ul li:first-child a:first-of-type {
-    margin-top: 48px;
+    margin-top: 27px;
     display: inline-block;
   }
   #header .header_container .mobile_nav_list ul li #mobile_nav_bar {
     position: absolute;
-    top: 55px;
+    top: 34px;
     right: 30px;
     height: 26px;
     width: 26px;
