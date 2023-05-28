@@ -297,7 +297,7 @@ $("#three-bar,#mobile_nav_bar,#sideBarLayer").click(function (e) {
 
   $(".mobile_nav_list > ul").toggleClass("is-open");
 
-  $("html,body").toggleClass("onscroll");
+  $("body").toggleClass("onscroll");
 
   if ($("#sideBarLayer").css("display") == "none") {
     $("#sideBarLayer").addClass("show");
