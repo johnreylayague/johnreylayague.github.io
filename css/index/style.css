@@ -148,11 +148,15 @@ table {
 .show {
   display: block !important;
 }
-.hidden {
+.none {
   display: none;
 }
-.overflow-hidden {
+.pointer-none {
+  pointer-events: none;
+}
+.onscroll {
   overflow: hidden;
+  height: 100%;
 }
 .clearfix::after {
   content: "";

@@ -292,7 +292,13 @@ $("#nav_contact_us,#mobile_nav_contact_us").click(function (e) {
   );
 });
 
-function ToggleSideBar() {
+$("#three-bar,#mobile_nav_bar,#sideBarLayer").click(function (e) {
+  e.preventDefault();
+
+  $(".mobile_nav_list > ul").toggleClass("is-open");
+
+  $("html,body").toggleClass("onscroll");
+
   if ($("#sideBarLayer").css("display") == "none") {
     $("#sideBarLayer").addClass("show");
   } else if ($("#sideBarLayer").css("display") == "block") {
@@ -309,12 +315,13 @@ function ToggleSideBar() {
     $("#sideBarLayer").css("opacity") == "1"
   ) {
     // Transition
+    $("#sideBarLayer").addClass("pointer-none");
     $(".opacity-0").on(
       "transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd",
       function () {
         // Transition has ended, do something here
 
-        $("#sideBarLayer").removeClass("show");
+        $("#sideBarLayer").removeClass("show").removeClass("pointer-none");
 
         // Remove the event handler if needed
         $(".opacity-0").off(
@@ -323,13 +330,6 @@ function ToggleSideBar() {
       }
     );
   }
-}
-
-$("#three-bar,#mobile_nav_bar,#sideBarLayer").click(function (e) {
-  e.preventDefault();
-  $(".mobile_nav_list > ul").toggleClass("is-open");
-  $("body").toggleClass("overflow-hidden");
-  ToggleSideBar();
 });
 
 $(document).on("scroll", function () {
