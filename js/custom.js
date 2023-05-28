@@ -292,37 +292,26 @@ $("#nav_contact_us,#mobile_nav_contact_us").click(function (e) {
   );
 });
 
-$("#three-bar,#mobile_nav_bar,#sideBarLayer").click(function (e) {
+$("#three-bar").click(function (e) {
   e.preventDefault();
+  $(".mobile_nav_list > ul").addClass("is-open");
+  $("#sideBarLayer").addClass("show");
+  $("body").addClass("onscroll");
 
-  $(".mobile_nav_list > ul").toggleClass("is-open");
-
-  if ($("#sideBarLayer").css("display") == "none") {
-    $("#sideBarLayer").toggleClass("show");
-    $("body").toggleClass("onscroll");
-  } else if ($("#sideBarLayer").css("display") == "block") {
-    $("#sideBarLayer").removeClass("opacity-1").addClass("opacity-0");
-  }
-
-  if (
-    $("#sideBarLayer").css("display") == "block" &&
-    $(".mobile_nav_list > ul").hasClass("is-open") == true
-  ) {
+  if ($("#sideBarLayer").css("display") == "block") {
     $("#sideBarLayer").removeClass("opacity-0").addClass("opacity-1");
   } else if (
     $("#sideBarLayer").css("display") == "block" &&
     $("#sideBarLayer").css("opacity") == "1"
   ) {
     // Transition
-    $("#sideBarLayer").toggleClass("pointer-none");
     $(".opacity-0").on(
       "transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd",
       function () {
         // Transition has ended, do something here
-
-        $("#sideBarLayer").toggleClass("show").toggleClass("pointer-none");
-        $("body").toggleClass("onscroll");
-
+        $(".mobile_nav_list > ul").removeClass("is-open");
+        $("#sideBarLayer").removeClass("show");
+        $("body").removeClass("onscroll");
         // Remove the event handler if needed
         $(".opacity-0").off(
           "transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd"
@@ -330,6 +319,25 @@ $("#three-bar,#mobile_nav_bar,#sideBarLayer").click(function (e) {
       }
     );
   }
+});
+
+$("#mobile_nav_bar,#sideBarLayer").click(function (e) {
+  e.preventDefault();
+  $(".mobile_nav_list > ul").removeClass("is-open");
+  $("#sideBarLayer").removeClass("opacity-1").addClass("opacity-0");
+
+  $(".opacity-0").on(
+    "transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd",
+    function () {
+      // Transition has ended, do something here
+
+      $("#sideBarLayer").removeClass("show");
+      // Remove the event handler if needed
+      $(".opacity-0").off(
+        "transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd"
+      );
+    }
+  );
 });
 
 $(document).on("scroll", function () {

@@ -151,9 +151,6 @@ table {
 .none {
   display: none;
 }
-.pointer-none {
-  pointer-events: none;
-}
 .onscroll {
   overflow: hidden;
   height: 100%;
