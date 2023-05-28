@@ -128,6 +128,21 @@
     margin-top: 27px;
     display: inline-block;
   }
+  #header .header_container .mobile_nav_list #sideBarLayer {
+    display: none;
+    opacity: 0;
+    height: 100%;
+    width: 100%;
+    background: #000000ba;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 149;
+    transition: opacity ease-in 0.5s;
+  }
+  #header .header_container .mobile_nav_list .is-show {
+    opacity: 1 !important;
+  }
   #header .header_container .mobile_nav_list ul li #mobile_nav_bar {
     position: absolute;
     top: 34px;

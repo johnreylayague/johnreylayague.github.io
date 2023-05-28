@@ -139,10 +139,21 @@ table {
 }
 
 /* preset */
-* {
-  /* outline: 1px dotted var(--bg-purple-color); */
+.opacity-0 {
+  opacity: 0 !important;
 }
-
+.opacity-1 {
+  opacity: 1 !important;
+}
+.show {
+  display: block !important;
+}
+.hidden {
+  display: none;
+}
+.overflow-hidden {
+  overflow: hidden;
+}
 .clearfix::after {
   content: "";
   clear: both;

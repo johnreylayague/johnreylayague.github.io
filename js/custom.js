@@ -250,11 +250,6 @@ $(".mobile_nav_list > #theme-change").click(function (e) {
   SwitchTheme();
 });
 
-$("#three-bar,#mobile_nav_bar").click(function (e) {
-  e.preventDefault();
-  $(".mobile_nav_list > ul").toggleClass("is-open");
-});
-
 const height = $("#header").height();
 
 $("#nav_portfolio,#mobile_nav_portfolio").click(function (e) {
@@ -297,6 +292,46 @@ $("#nav_contact_us,#mobile_nav_contact_us").click(function (e) {
   );
 });
 
+function ToggleSideBar() {
+  if ($("#sideBarLayer").css("display") == "none") {
+    $("#sideBarLayer").addClass("show");
+  } else if ($("#sideBarLayer").css("display") == "block") {
+    $("#sideBarLayer").removeClass("opacity-1").addClass("opacity-0");
+  }
+
+  if (
+    $("#sideBarLayer").css("display") == "block" &&
+    $(".mobile_nav_list > ul").hasClass("is-open") == true
+  ) {
+    $("#sideBarLayer").removeClass("opacity-0").addClass("opacity-1");
+  } else if (
+    $("#sideBarLayer").css("display") == "block" &&
+    $("#sideBarLayer").css("opacity") == "1"
+  ) {
+    // Transition
+    $(".opacity-0").on(
+      "transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd",
+      function () {
+        // Transition has ended, do something here
+
+        $("#sideBarLayer").removeClass("show");
+
+        // Remove the event handler if needed
+        $(".opacity-0").off(
+          "transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd"
+        );
+      }
+    );
+  }
+}
+
+$("#three-bar,#mobile_nav_bar,#sideBarLayer").click(function (e) {
+  e.preventDefault();
+  $(".mobile_nav_list > ul").toggleClass("is-open");
+  $("body").toggleClass("overflow-hidden");
+  ToggleSideBar();
+});
+
 $(document).on("scroll", function () {
   let get_height = $("#header").offset().top;
   let scroll_height = $(window).scrollTop();
@@ -304,11 +339,7 @@ $(document).on("scroll", function () {
 
   if (scroll_height > get_height || scroll_height != 0) {
     $("#header").addClass("shadow");
-    console.log("addClass shadow");
-    console.log(scroll_height);
   } else {
     $("#header").removeClass("shadow");
-    console.log("removeClass shadow");
-    console.log(scroll_height);
   }
 });
