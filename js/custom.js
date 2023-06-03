@@ -188,7 +188,7 @@ $(".career_list > ul > li")
 // here
 $(".career_description").scroll(function () {
   let container = $(".career_description");
-  let scroll = container.scrollTop() + 60;
+  let scroll = container.scrollTop();
 
   let scrollHeight = $(this).prop("scrollHeight");
   let containerHeight = $(this).height();
@@ -200,10 +200,10 @@ $(".career_description").scroll(function () {
   $("#" + elementData[1].id + "").removeClass("selected");
   $("#" + elementData[2].id + "").removeClass("selected");
 
-  if (scroll < elementData[1].value) {
+  if (scroll == elementData[0].value) {
     $("#" + elementData[0].id + "").addClass("selected");
     localStorage.setItem("career_id", elementData[0].id);
-  } else if (scroll > elementData[1].value) {
+  } else if (scroll + 60 > elementData[1].value) {
     $("#" + elementData[1].id + "").addClass("selected");
     localStorage.setItem("career_id", elementData[1].id);
   } else if (scroll > elementData[2].value) {
