@@ -149,13 +149,12 @@ $(".career_list > ul > li > a").click(function (e) {
   let id = e.currentTarget.id;
   let container = $(".career_description");
   let scrollTo = $("section#" + id + "");
-  let divHeight = $("section#" + id + "");
 
   // Calculating new position of scrollbar
   let position =
     scrollTo.offset().top - container.offset().top + container.scrollTop();
 
-  $(".career_description").css({ height: divHeight.height() });
+  // $(".career_description").css({ height: divHeight.height() });
   $(".career_list>ul>li>a").removeClass("selected");
   $("#" + id + "").addClass("selected");
 
@@ -164,6 +163,64 @@ $(".career_list > ul > li > a").click(function (e) {
 
   localStorage.setItem("career_id", id);
 });
+
+let container = $(".career_description");
+const elementData = [];
+
+$(".career_list > ul > li")
+  .find("a")
+  .each(function () {
+    var element = this;
+    var elementId = element.id;
+
+    let scrollTo = $("section#" + elementId + "");
+    let position =
+      scrollTo.offset().top - container.offset().top + container.scrollTop();
+
+    if (elementId) {
+      elementData.push({
+        id: elementId,
+        value: position,
+      });
+    }
+  });
+
+// here
+$(".career_description").scroll(function () {
+  let container = $(".career_description");
+  let scroll = container.scrollTop() + 60;
+
+  let scrollHeight = $(this).prop("scrollHeight");
+  let containerHeight = $(this).height();
+  let scrollTop = $(this).scrollTop() + containerHeight;
+
+  let lastElement = $(elementData).last().get(0);
+
+  $("#" + elementData[0].id + "").removeClass("selected");
+  $("#" + elementData[1].id + "").removeClass("selected");
+  $("#" + elementData[2].id + "").removeClass("selected");
+
+  if (scroll < elementData[1].value) {
+    $("#" + elementData[0].id + "").addClass("selected");
+    localStorage.setItem("career_id", elementData[0].id);
+  } else if (scroll > elementData[1].value) {
+    $("#" + elementData[1].id + "").addClass("selected");
+    localStorage.setItem("career_id", elementData[1].id);
+  } else if (scroll > elementData[2].value) {
+    $("#" + elementData[1].id + "").addClass("selected");
+    localStorage.setItem("career_id", elementData[1].id);
+  }
+
+  if (scrollTop >= scrollHeight) {
+    localStorage.setItem("career_id", elementData[2].id);
+    $("#" + elementData[0].id + "").removeClass("selected");
+    $("#" + elementData[1].id + "").removeClass("selected");
+    $("#" + elementData[2].id + "").removeClass("selected");
+    $("#" + lastElement.id + "").addClass("selected");
+  }
+});
+
+//
 
 $(window).on("resize", function (e) {
   let id = $(".career_list > ul > li > a.selected").attr("id");
@@ -288,6 +345,15 @@ $("#nav_contact_us,#mobile_nav_contact_us").click(function (e) {
 
   $("html, body").animate(
     { scrollTop: $("#contact").offset().top - height },
+    1000
+  );
+});
+
+$("#nav_experience,#mobile_nav_experience").click(function (e) {
+  e.preventDefault();
+
+  $("html, body").animate(
+    { scrollTop: $("#career-path").offset().top - height },
     1000
   );
 });

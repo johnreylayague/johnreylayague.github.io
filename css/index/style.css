@@ -750,11 +750,11 @@ body {
 .career_container .career_description {
   margin-top: 32px;
   padding-left: 1px;
-  overflow-y: hidden;
-  height: 660px;
+  overflow-y: auto;
+  height: 660px !important;
 }
-.career_container .career_description section:not(:first-child) {
-  margin-top: 55px;
+.career_container .career_description section:not(:last-child) {
+  padding-bottom: 55px;
 }
 .career_container .career_description section h2 {
   font-size: 18px;
