@@ -200,7 +200,7 @@ $(".career_description").scroll(function () {
   $("#" + elementData[1].id + "").removeClass("selected");
   $("#" + elementData[2].id + "").removeClass("selected");
 
-  if (scroll == elementData[0].value) {
+  if (scroll > elementData[0].value) {
     $("#" + elementData[0].id + "").addClass("selected");
     localStorage.setItem("career_id", elementData[0].id);
   } else if (scroll + 60 > elementData[1].value) {
