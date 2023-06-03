@@ -206,9 +206,6 @@ $(".career_description").scroll(function () {
   } else if (scroll > elementData[1].value) {
     $("#" + elementData[1].id + "").addClass("selected");
     localStorage.setItem("career_id", elementData[1].id);
-  } else if (scroll > elementData[2].value) {
-    $("#" + elementData[1].id + "").addClass("selected");
-    localStorage.setItem("career_id", elementData[1].id);
   }
 
   if (scrollTop >= scrollHeight) {
