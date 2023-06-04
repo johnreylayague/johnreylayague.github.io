@@ -89,6 +89,7 @@
     display: inline-block;
     vertical-align: middle;
     margin-right: 25px;
+    display: none;
   }
   #header .header_container .mobile_nav_list #three-bar {
     position: relative;
@@ -319,6 +320,9 @@
   }
   #header .header_container .mobile_nav_list ul li:last-child {
     padding-bottom: 40px;
+  }
+  #main .main_container .main_content #typed {
+    font-size: 30px;
   }
   /* main */
   #main {
