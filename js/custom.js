@@ -164,12 +164,34 @@ $(".career_list > ul > li > a").click(function (e) {
   localStorage.setItem("career_id", id);
 });
 
-let container = $(".career_description");
-const elementData = [];
+// let container = $(".career_description");
+// const elementData = [];
 
-$(".career_list > ul > li")
-  .find("a")
-  .each(function () {
+// $(".career_list > ul > li")
+//   .find("a")
+//   .each(function () {
+//     var element = this;
+//     var elementId = element.id;
+
+//     let scrollTo = $("section#" + elementId + "");
+//     let position =
+//       scrollTo.offset().top - container.offset().top + container.scrollTop();
+
+//     if (elementId) {
+//       elementData.push({
+//         id: elementId,
+//         value: position,
+//       });
+//     }
+//   });
+
+// here
+$(".career_description").scroll(function () {
+  let container = $(".career_description");
+  let career_list = $(".career_list > ul > li").find("a");
+  const elementData = [];
+
+  career_list.each(function () {
     var element = this;
     var elementId = element.id;
 
@@ -185,41 +207,38 @@ $(".career_list > ul > li")
     }
   });
 
-// here
-$(".career_description").scroll(function () {
-  let container = $(".career_description");
   let scroll = container.scrollTop() + 60;
-
   let scrollHeight = $(this).prop("scrollHeight");
   let containerHeight = $(this).height();
   let scrollTop = $(this).scrollTop() + containerHeight;
 
   let lastElement = $(elementData).last().get(0);
+  console.log(elementData);
+  career_list.each(function () {
+    var element = this;
+    $("#" + element.id + "").removeClass("selected");
+  });
 
-  $("#" + elementData[0].id + "").removeClass("selected");
-  $("#" + elementData[1].id + "").removeClass("selected");
-  $("#" + elementData[2].id + "").removeClass("selected");
-
-  if (scroll < elementData[1].value) {
-    $("#" + elementData[0].id + "").addClass("selected");
-    localStorage.setItem("career_id", elementData[0].id);
-  }
-
-  if (scroll > elementData[1].value) {
-    $("#" + elementData[1].id + "").addClass("selected");
-    localStorage.setItem("career_id", elementData[1].id);
+  for (let i = 0; i < elementData.length; i++) {
+    y = i + 1;
+    if (elementData.length != y) {
+      if (scroll < elementData[y].value) {
+        $("#" + elementData[i].id + "").addClass("selected");
+        localStorage.setItem("career_id", elementData[1].id);
+        break;
+      }
+    }
   }
 
   if (scrollTop >= scrollHeight) {
-    localStorage.setItem("career_id", elementData[2].id);
-    $("#" + elementData[0].id + "").removeClass("selected");
-    $("#" + elementData[1].id + "").removeClass("selected");
-    $("#" + elementData[2].id + "").removeClass("selected");
+    career_list.each(function () {
+      var element = this;
+      $("#" + element.id + "").removeClass("selected");
+    });
     $("#" + lastElement.id + "").addClass("selected");
+    localStorage.setItem("career_id", lastElement.id);
   }
 });
-
-//
 
 $(window).on("resize", function (e) {
   let id = $(".career_list > ul > li > a.selected").attr("id");
@@ -344,6 +363,15 @@ $("#nav_contact_us,#mobile_nav_contact_us").click(function (e) {
 
   $("html, body").animate(
     { scrollTop: $("#contact").offset().top - height },
+    1000
+  );
+});
+
+$("#nav_experience,#mobile_nav_experience").click(function (e) {
+  e.preventDefault();
+
+  $("html, body").animate(
+    { scrollTop: $("#career-path").offset().top - height },
     1000
   );
 });
