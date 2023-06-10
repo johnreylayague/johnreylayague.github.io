@@ -12,6 +12,11 @@ a {
 } */
 
 /* reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 html,
 body,
 div,
@@ -681,8 +686,8 @@ body {
   position: relative;
 }
 .career_container .career_list {
-  width: 420px;
   float: left;
+  width: 35%;
 }
 .career_container .career_list p {
   font-size: 12px;
@@ -714,7 +719,7 @@ body {
 }
 .career_container .career_list ul {
   margin-top: 90px;
-  width: 320px;
+  width: 76%;
 }
 .career_container .career_list ul li a {
   color: var(--text-black-color);
@@ -724,7 +729,7 @@ body {
   text-decoration: none;
   position: relative;
   display: block;
-  padding: 14px 32px;
+  padding: 14px 55px 14px 32px;
   line-height: 20px;
 }
 .career_container .career_list ul li a:hover {
@@ -748,8 +753,9 @@ body {
   content: url(../../icons/career-path-chevron-lright-icon.svg);
 }
 .career_container .career_description {
+  float: right;
   margin-top: 32px;
-  padding-left: 1px;
+  width: 65%;
   overflow-y: auto;
   height: 660px !important;
 }
