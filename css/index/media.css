@@ -39,7 +39,7 @@
 @media only screen and (max-width: 1199.98px) {
   /* header */
   #header .header_container .nav_list li + li {
-    margin-left: 25px;
+    margin-left: 15px;
   }
   #header .header_container .header_right li + li::before {
     margin-right: 25px;

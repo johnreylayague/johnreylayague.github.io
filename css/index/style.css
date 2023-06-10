@@ -199,17 +199,26 @@ textarea {
 
   --light-border-color: #f1f1f1;
   --light-border-1-color: #f5f5f5;
+  --light-bg-card-color: #ffffff;
+  --light-text-card-p-color: #656d72;
+  --light-text-card-h2-color: #232e35;
+
+  --light-text-input-color: #232e35;
+  --light-text-input-placeholder-color: #232e35;
+  --light-bg-input-color: #ffffff;
+
+  --light-button-text-color: #ffffff;
 
   /* dark theme*/
   --dark-text-black-color: #fff;
   --dark-text-purple-color: #7e74f1;
   --dark-text-gray-color: #fff;
   --dark-text-white-color: #ffffff;
-  --dark-text-white-1-color: #f5f3fe;
+  --dark-text-white-1-color: #232e35;
 
   --dark-bg-white-1-color: #232e35;
   --dark-bg-white-2-color: #232e35;
-  --dark-bg-purple-color: #fff;
+  --dark-bg-purple-color: #7e74f1;
   --dark-bg-white-3-color: #f5f3fe;
   --dark-bg-gradient-color: linear-gradient(
     0deg,
@@ -219,6 +228,16 @@ textarea {
 
   --dark-border-color: #f1f1f1;
   --dark-border-1-color: #f5f5f5;
+
+  --dark-bg-card-color: #ffffff;
+  --dark-text-card-p-color: #232e35;
+  --dark-text-card-h2-color: #232e35;
+
+  --dark-text-input-color: #232e35;
+  --dark-text-input-placeholder-color: #232e35;
+  --dark-bg-input-color: #ffffff;
+
+  --dark-button-text-color: #ffffff;
 }
 .light {
   --text-black-color: var(--light-text-black-color);
@@ -235,6 +254,16 @@ textarea {
 
   --border-color: var(--light-border-color);
   --border-1-color: var(--light-border-1-color);
+
+  --bg-card-color: var(--light-bg-card-color);
+  --text-card-p-color: var(--light-text-card-p-color);
+  --text-card-h2-color: var(--light-text-card-h2-color);
+
+  --text-input-placeholder-color: var(--light-text-input-placeholder-color);
+  --text-input-color: var(--light-text-input-color);
+  --bg-input-color: var(--light-bg-input-color);
+
+  --button-text-color: var(--light-button-text-color);
 }
 .dark {
   --text-black-color: var(--dark-text-black-color);
@@ -251,6 +280,16 @@ textarea {
 
   --border-color: var(--dark-border-color);
   --border-1-color: var(--dark-border-1-color);
+
+  --bg-card-color: var(--dark-bg-card-color);
+  --text-card-p-color: var(--dark-text-card-p-color);
+  --text-card-h2-color: var(--dark-text-card-p-color);
+
+  --text-input-placeholder-color: var(--dark-text-input-placeholder-color);
+  --text-input-color: var(--dark-text-input-color);
+  --bg-input-color: var(--dark-bg-input-color);
+
+  --button-text-color: var(--dark-button-text-color);
 }
 
 body {
@@ -279,6 +318,7 @@ body {
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
 .header_container {
+  position: relative;
   text-align: center;
 }
 .header_container .header_logo {
@@ -301,7 +341,7 @@ body {
   position: relative;
 }
 .header_container .nav_list li + li {
-  margin-left: 56px;
+  margin-left: 30px;
 }
 .header_container .nav_list li a {
   text-decoration: none;
@@ -334,8 +374,8 @@ body {
 }
 .header_container .header_right li a .moon-icon {
   display: block;
-  height: 24px;
-  width: 24px;
+  height: 30px;
+  width: 30px;
   background: url(../../icons/moon-icon.svg);
   background-repeat: no-repeat;
 }
@@ -404,6 +444,7 @@ body {
   font-size: 44px;
   font-weight: 800;
   font-family: "Plus Jakarta Sans", sans-serif;
+  color: var(--text-black-color);
 }
 .main_container .main_content span span {
   color: var(--text-purple-color);
@@ -804,7 +845,7 @@ body {
   vertical-align: middle;
 }
 .career_container .career_description section .tech_stack_list li {
-  margin: 10px 11px 10px 0px;
+  margin: 10px 11px 10px 1px;
 }
 .career_container .career_description section .experience_list {
   padding-top: 32px;
@@ -888,7 +929,7 @@ body {
   margin-top: 135px;
   min-height: 290px;
   border-radius: 8px;
-  background-color: var(--bg-white-1-color);
+  background-color: var(--bg-card-color);
   position: relative;
   box-sizing: border-box;
   padding: 90px 30px 30px 30px;
@@ -915,7 +956,7 @@ body {
   font-weight: 400;
   font-family: "Inter", sans-serif;
   line-height: 28px;
-  color: var(--text-black-colorr);
+  color: var(--text-card-p-color);
   min-height: 65px;
   margin-bottom: 50px;
 }
@@ -923,7 +964,7 @@ body {
   font-size: 14px;
   font-weight: 500;
   font-family: "Plus Jakarta Sans", sans-serif;
-  color: var(--text-black-colorr);
+  color: var(--text-card-h2-color);
   margin-bottom: 11px;
 }
 .testimonial_container section h3 {
@@ -1178,7 +1219,6 @@ body {
 }
 .contact_container .contact_left {
   float: left;
-  /* width: 550px; */
   width: 47%;
 }
 .contact_container .contact_left form input:not(:first-child) {
@@ -1191,37 +1231,38 @@ body {
   width: 100%;
   border: 0;
   padding: 0px 24px;
-  background-color: var(--bg-white-1-color);
+  background-color: var(--bg-input-color);
+  color: var(--text-input-color);
 }
 .contact_container .contact_left form input::-webkit-input-placeholder {
   font-weight: 400;
   font-family: "Inter", sans-serif;
   font-size: 14px;
-  color: var(--text-gray-color);
+  color: var(--text-input-placeholder-color);
 }
 .contact_container .contact_left form input::-moz-placeholder {
   font-weight: 400;
   font-family: "Inter", sans-serif;
   font-size: 14px;
-  color: var(--text-gray-color);
+  color: var(--text-input-placeholder-color);
 }
 .contact_container .contact_left form input:-ms-input-placeholder {
   font-weight: 400;
   font-family: "Inter", sans-serif;
   font-size: 14px;
-  color: var(--text-gray-color);
+  color: var(--text-input-placeholder-color);
 }
 .contact_container .contact_left form input::-ms-input-placeholder {
   font-weight: 400;
   font-family: "Inter", sans-serif;
   font-size: 14px;
-  color: var(--text-gray-color);
+  color: var(--text-input-placeholder-color);
 }
 .contact_container .contact_left form input::placeholder {
   font-weight: 400;
   font-family: "Inter", sans-serif;
   font-size: 14px;
-  color: var(--text-gray-color);
+  color: var(--text-input-placeholder-color);
 }
 .contact_container .contact_left form input:focus-visible {
   outline: 2px solid var(--bg-purple-color);
@@ -1237,10 +1278,11 @@ body {
   min-height: 190px;
   max-height: 350px;
   padding: 20px 24px;
-  background-color: var(--bg-white-1-color);
+  background-color: var(--bg-input-color);
   width: 100%;
   max-width: 100%;
   min-width: 100%;
+  color: var(--text-input-color);
 }
 .contact_container
   .contact_left
@@ -1249,7 +1291,7 @@ body {
   font-weight: 400;
   font-family: "Inter", sans-serif;
   font-size: 14px;
-  color: var(--text-gray-color);
+  color: var(--text-input-placeholder-color);
 }
 .contact_container
   .contact_left
@@ -1258,7 +1300,7 @@ body {
   font-weight: 400;
   font-family: "Inter", sans-serif;
   font-size: 14px;
-  color: var(--text-gray-color);
+  color: var(--text-input-placeholder-color);
 }
 .contact_container
   .contact_left
@@ -1267,7 +1309,7 @@ body {
   font-weight: 400;
   font-family: "Inter", sans-serif;
   font-size: 14px;
-  color: var(--text-gray-color);
+  color: var(--text-input-placeholder-color);
 }
 .contact_container
   .contact_left
@@ -1276,7 +1318,7 @@ body {
   font-weight: 400;
   font-family: "Inter", sans-serif;
   font-size: 14px;
-  color: var(--text-gray-color);
+  color: var(--text-input-placeholder-color);
 }
 .contact_container
   .contact_left
@@ -1285,7 +1327,7 @@ body {
   font-weight: 400;
   font-family: "Inter", sans-serif;
   font-size: 14px;
-  color: var(--text-gray-color);
+  color: var(--text-input-placeholder-color);
 }
 .contact_container
   .contact_left
@@ -1307,7 +1349,7 @@ body {
   font-weight: 500;
   font-family: "Inter", sans-serif;
   font-size: 14px;
-  color: var(--text-white-1-color);
+  color: var(--button-text-color);
   background-color: var(--bg-purple-color);
 }
 .contact_container .contact_left form button[name="btn-send"]:hover {

@@ -290,15 +290,24 @@ $(window).on("load", function () {
       .find("span")
       .removeClass("moon-icon")
       .addClass("sun-icon");
+    $("#profile-logo").attr("src", function (i, src) {
+      var currentFileName = src.split("/").pop();
+      var newPath = src.replace(currentFileName, "portfolio-logo-dark.svg");
+      $(this).attr("src", newPath);
+    });
   } else if (localStorage.getItem("theme_style") == "light") {
     $("body").removeClass("dark").addClass("light");
     $("#theme-change")
       .find("span")
       .removeClass("sun-icon")
       .addClass("moon-icon");
+    $("#profile-logo").attr("src", function (i, src) {
+      var currentFileName = src.split("/").pop();
+      var newPath = src.replace(currentFileName, "portfolio-logo.svg");
+      $(this).attr("src", newPath);
+    });
   }
 });
-
 function SwitchTheme() {
   if ($("body").hasClass("light")) {
     $("body").removeClass("light").addClass("dark");
@@ -307,6 +316,12 @@ function SwitchTheme() {
       .removeClass("moon-icon")
       .addClass("sun-icon");
     localStorage.setItem("theme_style", "dark");
+
+    $("#profile-logo").attr("src", function (i, src) {
+      var currentFileName = src.split("/").pop();
+      var newPath = src.replace(currentFileName, "portfolio-logo-dark.svg");
+      $(this).attr("src", newPath);
+    });
   } else {
     $("body").removeClass("dark").addClass("light");
     $("#theme-change")
@@ -314,6 +329,12 @@ function SwitchTheme() {
       .removeClass("sun-icon")
       .addClass("moon-icon");
     localStorage.setItem("theme_style", "light");
+
+    $("#profile-logo").attr("src", function (i, src) {
+      var currentFileName = src.split("/").pop();
+      var newPath = src.replace(currentFileName, "portfolio-logo.svg");
+      $(this).attr("src", newPath);
+    });
   }
 }
 $("#theme-change").click(function (e) {
