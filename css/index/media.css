@@ -211,6 +211,9 @@
   }
 
   /* main */
+  #main {
+    margin-top: 90px !important;
+  }
   #main .main_container .main_content #typed {
     font-size: 30px;
   }
